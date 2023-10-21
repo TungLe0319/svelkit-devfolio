@@ -4,26 +4,21 @@
 </script>
 
 <HeroSectionV2>
-	<section class="mb-5">
+	<section class="pt-10 mt-10 mb-5 text-shadow text-white dark:text-indigo-500">
 		<div class=" font-1 mb-4">
 			<div class="">
-				<p class="text-start text-4xl text-shadow">Creative</p>
+				<p class="text-start text-3xl ">Creative</p>
 
-				<p class="text-black text-7xl dark:text-white mb-0 text-shadow">
-					Design
-				</p>
-			<div class="flex justify-center my-3">
-					<b class=" text-7xl text-center ">&</b>
-			</div>
-			<div class=" flex flex-col items-end dark:text-white">
-					<p class="text-start text-4xl text-shadow">Creative</p>
+				<p class=" text-7xl mb-0 ">Design</p>
+				<div class="flex justify-center">
+					<b class=" text-7xl text-center">&</b>
+				</div>
+				<div class=" flex flex-col items-end">
+					<p class="text-start text-3xl ">Creative</p>
 
-				<p class="text-black text-7xl dark:text-white mb-0 text-shadow">
-					Design
-				</p>
+					<p class="text-7xl e mb-0 ">Design</p>
+				</div>
 			</div>
-			</div>
-		
 		</div>
 		<SetupAnimation />
 	</section>

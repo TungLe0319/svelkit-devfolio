@@ -5,7 +5,7 @@
 
 	let rotateDeg = 0; // Initial rotation degree
 
-	function setRotateDegWithDelay(deg) {
+	function setRotateDegWithDelay(deg: number) {
 		setTimeout(() => {
 			rotateDeg = deg;
 		}, 150);

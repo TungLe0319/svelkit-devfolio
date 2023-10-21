@@ -25,14 +25,14 @@
 		},
 		{
 			command: '😅.........🤬',
-			caption: 'go through an **emotional** crisis.'
+			caption: 'go through an **emotional** rollercoaster'
 		},
 		{
 			command: 'cd..',
 			caption: '**........**'
 		},
 		{
-			command: '🤷‍♂️ rm -y new-project',
+			command: '🤷‍♂️ rm new-project',
 			caption: '**Start** another project'
 		},
 		{
@@ -59,7 +59,7 @@
 
 <main>
 	<Screen
-		class="screen !bg-gray-900 !text-gray-300 dark:!bg-gray-300 dark:!text-gray-900"
+		class="screen !bg-gray-900 !text-gray-300  "
 		title="Terminal"
 	>
 		<div class="wrapper">

@@ -2,7 +2,8 @@
 <script>
 	import { page } from '$app/stores';
 	// @ts-ignore
-	import { videoSource } from '$lib/stores/landingPage.ts';
+	import { isDarkMode, videoSource } from '$lib/stores/landingPage.ts';
+	import { SunSolid, MoonSolid } from 'flowbite-svelte-icons';
 
 	import {
 		Avatar,
@@ -17,25 +18,35 @@
 		NavUl,
 		NavHamburger
 	} from 'flowbite-svelte';
+	import { onMount } from "svelte";
 
 	let activeUrl = '';
 	let activeClass =
 		'text-white bg-green-700 md:bg-transparent md:text-orange-400 md:dark:text-orange-400 dark:bg-green-600 md:dark:bg-transparent';
 	let nonActiveClass =
-		'text-white hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-indigo-300 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-indigo-300 dark:hover:text-white md:dark:hover:bg-transparent';
+		'!text-white hover:bg-gray-100 md:hover:bg-transparent border-0 hover:text-indigo-300 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-indigo-300 dark:hover:text-white dark:hover:bg-transparent';
 
 	$: {
 		activeUrl = $page.url.pathname;
+		// const bodyEl = document.querySelector('body');
+		// if (bodyEl?.classList.contains('dark:bg-gray-900')) {
+		// 	$videoSource = 'src/lib/assets/animated2.mp4';
+		// } else {
+		// 	$videoSource = 'src/lib/assets/animated1.mp4';
+		// }
 	}
 
-	let isDarkMode = false;
 	const handleChange = () => {
-		$videoSource = 'src/lib/assets/animated1.mp4';
-		isDarkMode = !isDarkMode;
-		if (isDarkMode) {
+		const bodyEl = document.querySelector('html');
+		if (bodyEl?.classList.contains('dark')) {
 			$videoSource = 'src/lib/assets/animated2.mp4';
+		} else {
+			$videoSource = 'src/lib/assets/animated1.mp4';
 		}
 	};
+	onMount(()=>{
+		handleChange()
+	})
 </script>
 
 <Navbar
@@ -56,9 +67,14 @@
 			<NavLi class="text-lg font-3" href="/contact">Contact</NavLi>
 		</NavUl>
 		<NavHamburger class1="w-full md:flex md:w-auto md:order-1" />
-	
-		<button  on:click={handleChange}>
-			<DarkMode btnClass=" w-6 h-6" />
+
+		<button
+			on:click={handleChange}
+			class="bg-transparents hover:outline-none hover:border-none dark:hover:bg-transparent dark:hover:border"
+		>
+			<DarkMode
+				class="hover:brightness-75  transition-all duration-150 bg-transparent hover:bg-transparent selection:bg-transparent !text-indigo-400 dark:!text-white"
+			/>
 		</button>
 	</div>
 </Navbar>
@@ -67,36 +83,5 @@
 	.navbar-hidden {
 		transform: translateY(-100%);
 		transition: all 0.5s ease;
-	}
-	.link,
-	.sign-out-btn {
-		@apply relative flex ml-0 pl-0  transition-transform duration-200  text-2xl;
-
-		text-decoration: none;
-		font-weight: 600;
-		font-family: 'Shadows Into Light', cursive;
-
-		&:hover {
-			transform: scaleX(1);
-			text-decoration: none;
-		}
-
-		&::after {
-			content: '';
-			position: absolute;
-			bottom: 0;
-			left: 0;
-			width: 0;
-			height: 3px;
-			background-color: orange;
-			transform-origin: 0 100%;
-			transform: scaleX(0);
-			transition: transform 0.3s, width 0.3s;
-		}
-
-		&:hover::after {
-			transform: scaleX(1);
-			width: 100%;
-		}
 	}
 </style>
