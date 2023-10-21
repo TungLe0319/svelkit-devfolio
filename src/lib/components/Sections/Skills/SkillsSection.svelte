@@ -1,6 +1,7 @@
-<script>
+<script lang="ts">
 	import { Timeline, TimelineItem, Button, Gallery, Tooltip } from 'flowbite-svelte';
 	import { ArrowRightOutline } from 'flowbite-svelte-icons';
+	
 	const skillsIcons = [
 		{
 			title: 'HTML5',
@@ -118,10 +119,12 @@
 			src: 'https://pluspng.com/img-png/trello-png-trello-png-1600.png'
 		}
 	];
+
+
 </script>
 
-<div class=" w-full">
-	<div class=" text-6xl font-1">Skills</div>
+<div class=" pt-8 w-full   -z-10" >
+	<!-- <div class=" text-6xl font-1">Skills</div> -->
 	<div class=" gap-4 grid-cols-4 grid md:grid-cols-10">
 		{#each skillsIcons as icon, index}
 			<img src={icon.src} class="w-20 h-20" alt="Icon" />
@@ -130,8 +133,9 @@
 			</Tooltip>
 		{/each}
 	</div>
-
+	
 	<!-- <Gallery items={skillsIcons} class="gap-4 grid-cols-2  md:grid-cols-12" /> -->
 </div>
+
 
 <style></style>

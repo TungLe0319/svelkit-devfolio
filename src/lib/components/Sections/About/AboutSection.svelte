@@ -1,23 +1,26 @@
 <script>
-	import { Timeline, TimelineItem, Button } from 'flowbite-svelte';
+	import { Timeline, TimelineItem, Button, Gallery } from 'flowbite-svelte';
 	import { ArrowRightOutline } from 'flowbite-svelte-icons';
-	let y;
 
-	$: {
-		if (y) {
-		}
-	}
 </script>
 
-
-<div class=" locomotive-section w-full" style="transform: translateY(-{y}px) ">
+<div class=" locomotive-section w-full">
 	<div class=" text-6xl font-1 dark:text-white">About Me</div>
 	<Timeline>
-		<TimelineItem  title="Application UI code in Tailwind CSS" date="February 2022">
+		<TimelineItem title="Application UI code in Tailwind CSS" date="February 2022">
 			<p class="mb-4 text-base font-normal text-gray-500 dark:text-gray-400">
-				Get access to over 20+ pages including a dashboard layout, charts, kanban board, calendar,
-				and pre-order E-commerce & Marketing pages.
+			
+
+
 			</p>
+			<div class="grid grid-cols-3">
+	<img src="src\lib\assets\images\CosmicWolf.png" alt="" class="w-48">
+<img src="src\lib\assets\images\Mandala1.png" alt="" class="w-48">
+<img src="src\lib\assets\images\Mandala2.png" alt="" class="w-48">
+<img src="src\lib\assets\images\Newt.png" alt="" class="w-48">
+<img src="src\lib\assets\images\SunflowerStar.png" alt="" class="w-48 ">
+<img src="src\lib\assets\images\Turtle.png" alt="" class="w-48">
+</div>
 			<Button color="alternative">Learn more<ArrowRightOutline class="ml-2 w-3 h-3" /></Button>
 		</TimelineItem>
 		<TimelineItem title="Application UI code in Tailwind CSS" date="March 2022">
@@ -34,9 +37,6 @@
 		</TimelineItem>
 	</Timeline>
 </div>
-<svelte:window bind:scrollY={y} />
 
 <style>
-
-
 </style>

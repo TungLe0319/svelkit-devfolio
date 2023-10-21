@@ -1,8 +1,8 @@
-<script>
+<script lang="ts">
 	import { writable } from 'svelte/store';
 	import { setContext } from 'svelte';
 	import Project from './Project.svelte';
-
+	import { Gallery } from 'flowbite-svelte';
 	const projects = writable([
 		{
 			title: 'SamadhiYogaIdaho',
@@ -94,13 +94,18 @@
 	]);
 </script>
 
-<div class=" w-full">
-
-	<div class=" text-6xl font-1">Portfolio</div>
+.
+<div class=" flex text-6xl font-1 px-2">Portfolio</div>
+<div class=" grid grid-col-2 px-20">
 	{#each $projects as project, index}
 		<Project {project} />
 	{/each}
 </div>
 
 <style>
+	.grid-col-2 {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 16px; /* Adjust gap as needed */
+	}
 </style>

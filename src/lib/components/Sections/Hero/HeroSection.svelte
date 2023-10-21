@@ -1,8 +1,15 @@
-<script>
+<script lang="ts">
 	import { writable } from 'svelte/store';
+	import { onMount } from 'svelte';
+	import { tweened } from 'svelte/motion';
 
-	import { setContext, onMount } from 'svelte';
-	let y = 0;
+	let progress = tweened(0, { duration: 1000 });
+
+	onMount(() => {
+		progress.set(1); // Start the animation on page load
+	});
+
+	let y: number;
 
 	$: {
 		y;
@@ -16,6 +23,7 @@
 		<div class="row justify-content-between w-100">
 			<div id="heroText2" class="col-md-6 hero-text-2 mt-5">
 				<p class="text-start text-4xl ms-5 font-1 text-shadow">creative</p>
+			
 				<p class="font-1 display-7 mb-0 text-shadow">
 					Designer <b class="display-6 text-warning">&</b>
 				</p>
@@ -33,7 +41,13 @@
 <svelte:window bind:scrollY={y} />
 
 <style lang="scss">
+	  .box {
+    width: 100px;
+    height: 100px;
+    background-color: blue;
 
+    transition: transform 1s ease;
+  }
 	.hero-text-2 {
 		transition: all 0.25s ease-out;
 	}
@@ -50,8 +64,8 @@
 		height: 100vh;
 		/* always scale the image to the appropriate size of your screen */
 		background-size: cover;
-		
-		// background-image: url('https://images.unsplash.com/photo-1697451446465-c1dba554aa44?auto=format&fit=crop&q=80&w=1974&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+
+		background-image: url('https://images.unsplash.com/photo-1618005198919-d3d4b5a92ead?auto=format&fit=crop&q=80&w=1374&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
 		background-position: center;
 		/* keeps the image fixed while scrolling , neat effect. */
 		background-attachment: fixed;
