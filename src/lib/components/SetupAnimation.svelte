@@ -16,23 +16,27 @@
 			caption: '**Scaffold** the project.'
 		},
 		{
-			command: 'echo "pull off something neat" > src/routes/+page.svelte',
-			caption: '**Try** to do something really cool'
+			command: 'echo "Hello World!" > src/routes/+page.svelte',
+			caption: '**Try** to do something simple.'
 		},
 		{
-			command: 'Error,Error,you will never find me,Error,,Error,',
-			caption: '**Fight** with yourself and your code'
+			command: 'Error,Error,Error',
+			caption: '**Fail** miserably.'
 		},
 		{
-			command: '😅😥😫😡🤬',
-			caption: 'go through an **emotional** crisis'
+			command: '😅.........🤬',
+			caption: 'go through an **emotional** crisis.'
 		},
 		{
 			command: 'cd..',
-			caption: '**Remember** why you started this in the first place'
+			caption: '**........**'
 		},
 		{
 			command: '🤷‍♂️ rm -y new-project',
+			caption: '**Start** another project'
+		},
+		{
+			command: 'npm install svelte@latest new-project-2',
 			caption: '**Start** another project'
 		}
 	];
@@ -55,7 +59,7 @@
 
 <main>
 	<Screen
-		class="screen !bg-gray-900 !text-gray-900 dark:!bg-gray-300 dark:text-white"
+		class="screen !bg-gray-900 !text-gray-300 dark:!bg-gray-300 dark:!text-gray-900"
 		title="Terminal"
 	>
 		<div class="wrapper">
@@ -94,7 +98,7 @@
 	:global(body) {
 		background: #444;
 		--screen-background-color: #333;
-		--screen-text-color: #ccc;
+
 		--screen-border-color: #8885;
 		--screen-shadow-color: transparent;
 		--width: 600px;

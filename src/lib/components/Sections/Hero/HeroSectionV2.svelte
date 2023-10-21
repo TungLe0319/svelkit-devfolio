@@ -1,36 +1,35 @@
 <script lang="ts">
 	import { browser } from '$app/environment';
 	import { page } from '$app/stores';
-	import SetupAnimation from '$lib/components/SetupAnimation.svelte';
 	import { videoSource } from '$lib/stores/landingPage';
-  
-  let rotateDeg = 0; // Initial rotation degree
 
-  function setRotateDegWithDelay(deg) {
-    setTimeout(() => {
-      rotateDeg = deg;
-    }, 150);
-  }
+	let rotateDeg = 0; // Initial rotation degree
 
-  $: {
-    switch ($page.route.id) {
-      case '/':
-        setRotateDegWithDelay(0);
-        break;
-      case '/about':
-        setRotateDegWithDelay(180);
-        break;
-      case '/portfolio':
-        setRotateDegWithDelay(0);
-        break;
-      case '/contact':
-        setRotateDegWithDelay(180);
-        break;
-      default:
-        setRotateDegWithDelay(0);
-        break;
-    }
-  }
+	function setRotateDegWithDelay(deg) {
+		setTimeout(() => {
+			rotateDeg = deg;
+		}, 150);
+	}
+
+	$: {
+		switch ($page.route.id) {
+			case '/':
+				setRotateDegWithDelay(0);
+				break;
+			case '/about':
+				setRotateDegWithDelay(180);
+				break;
+			case '/portfolio':
+				setRotateDegWithDelay(0);
+				break;
+			case '/contact':
+				setRotateDegWithDelay(180);
+				break;
+			default:
+				setRotateDegWithDelay(0);
+				break;
+		}
+	}
 </script>
 
 <div class=" relative flex flex-col justify-center items-center">
@@ -38,18 +37,15 @@
 		<video
 			id="myVideo"
 			src={$videoSource}
-		
 			loop
 			muted
 			autoplay
 			class="object-fit"
-      style="transform: rotate({rotateDeg}deg); "
+			style="transform: rotate({rotateDeg}deg); "
 		/>
 	</div>
 	<div class="absolute dark:text-white">
-	<slot>
-    
-  </slot>
+		<slot />
 	</div>
 </div>
 
