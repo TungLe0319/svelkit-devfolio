@@ -3,7 +3,7 @@
 	import { setContext } from 'svelte';
 	import Project from './Project.svelte';
 
-	 const projects = writable([
+	const projects = writable([
 		{
 			title: 'SamadhiYogaIdaho',
 			imageSrc:
@@ -92,13 +92,14 @@
 			link: 'https://thedailysun.devopportunities.dev/'
 		}
 	]);
-
 </script>
 
-<div class="container">
-  {#each $projects as project, index}
-    <Project {project}/>
-  {/each}
+<div class=" w-full">
+
+	<div class=" text-6xl font-1">Portfolio</div>
+	{#each $projects as project, index}
+		<Project {project} />
+	{/each}
 </div>
 
 <style>
