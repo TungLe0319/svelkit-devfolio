@@ -6,8 +6,10 @@
 	import AboutSection from '$lib/components/Sections/About/AboutSection.svelte'
 	import EducationSection from '$lib/components/Sections/Education/EducationSection.svelte'
 	import SkillsSection from '$lib/components/Sections/Skills/SkillsSection.svelte'
+	import HeroSection from '$lib/components/Sections/Hero/HeroSection.svelte'
 </script>
 
+<HeroSection/>
 <main class=" pt-14 flex justify-center items-center px-6">
 	<div class="p-1 justify-center flex flex-col items-center">
 		<AboutSection/>
