@@ -19,3 +19,7 @@
 .font-4 {
   font-family: "Playfair Display", serif;
 }
+
+.locomotive-section {
+  transition: transform 1s cubic-bezier(0.25, 0.1, 0.25, 1); /* Use a custom cubic-bezier function */
+}

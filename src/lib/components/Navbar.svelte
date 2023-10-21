@@ -17,7 +17,7 @@
   } from "flowbite-svelte";
   import { GithubSolid, LinkedinSolid } from "flowbite-svelte-icons";
 
-
+import {} from '../'
   
 
   let isMenuOpen = false;

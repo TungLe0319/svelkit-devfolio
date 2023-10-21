@@ -1,5 +1,7 @@
-import adapter from '@sveltejs/adapter-auto';
 import { vitePreprocess } from '@sveltejs/kit/vite';
+import adapter from '@sveltejs/adapter-node';
+
+
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
 	kit: {
@@ -11,7 +13,16 @@ const config = {
 		// See https://kit.svelte.dev/docs/adapters for more information about adapters.
 		adapter: adapter()
 	},
-	preprocess: vitePreprocess()
+
+	preprocess: [
+		vitePreprocess({
+			// Add SCSS preprocessing to the Vite preprocessor
+			// @ts-ignore
+			style: ({ content }) => {
+				return require('sass').renderSync({ data: content }).css.toString();
+			}
+		})
+	]
 };
 
 export default config;

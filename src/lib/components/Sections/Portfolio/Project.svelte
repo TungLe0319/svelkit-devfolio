@@ -2,6 +2,12 @@
 	import { fly } from 'svelte/transition';
 	import { Badge } from 'flowbite-svelte';
 	export let project;
+	let y;
+
+	$: {
+		if (y) {
+		}
+	}
 </script>
 
 {#if project}
@@ -50,3 +56,5 @@
 		</div>
 	</div>
 {/if}
+
+<svelte:window bind:scrollY={y} />

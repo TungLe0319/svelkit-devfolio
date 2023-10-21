@@ -3,8 +3,7 @@
   import Navbar from '../lib/components/Navbar.svelte'
   import Footer from '../lib/components/Footer.svelte'
   import { fade } from "svelte/transition";
-  import { page } from "$app/stores";
-
+  import { page } from "$app/stores"
 
 /** @type {import('./$types').LayoutData} */
   export let data;
