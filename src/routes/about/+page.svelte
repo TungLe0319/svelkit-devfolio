@@ -1,24 +1,45 @@
-<script>
- import AboutSection from "$lib/components/Sections/About/AboutSection.svelte";
-import Hero from '../../lib/components/Hero.svelte'
-  import { Timeline, TimelineItem, Button } from "flowbite-svelte";
-  import { ArrowRightOutline, CalendarWeekSolid } from "flowbite-svelte-icons";
+<script lang="ts">
+	import HeroSectionV2 from '$lib/components/Sections/Hero/HeroSectionV2.svelte';
+import { Timeline, TimelineItem, Button } from 'flowbite-svelte';
+	import { ArrowRightOutline, CalendarWeekSolid } from 'flowbite-svelte-icons';
 
-  const heroProps = {
-    image:
-      "https://images.unsplash.com/photo-1685391722227-df9eec0583ec?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1445&q=80",
-    title: "About This Project",
-    subTitle: "And a little about me",
-    height: 100,
-  };
+
 </script>
 
+<HeroSectionV2/>
 <main class=" pt-14 flex justify-center items-center px-6">
 	<div class="p-1 justify-center flex flex-col items-center">
-
-    <AboutSection/>
-    </div>
-    </main>
+		<div class=" locomotive-section w-full">
+			<div class=" text-6xl font-1 dark:text-white">About Me</div>
+			<Timeline>
+				<TimelineItem title="Application UI code in Tailwind CSS" date="February 2022">
+					<p class="mb-4 text-base font-normal text-gray-500 dark:text-gray-400" />
+					<div class="grid grid-cols-3">
+						<img src="src\lib\assets\images\CosmicWolf.png" alt="" class="w-48" />
+						<img src="src\lib\assets\images\Mandala1.png" alt="" class="w-48" />
+						<img src="src\lib\assets\images\Mandala2.png" alt="" class="w-48" />
+						<img src="src\lib\assets\images\Newt.png" alt="" class="w-48" />
+						<img src="src\lib\assets\images\SunflowerStar.png" alt="" class="w-48" />
+						<img src="src\lib\assets\images\Turtle.png" alt="" class="w-48" />
+					</div>
+					<Button color="alternative">Learn more<ArrowRightOutline class="ml-2 w-3 h-3" /></Button>
+				</TimelineItem>
+				<TimelineItem title="Application UI code in Tailwind CSS" date="March 2022">
+					<p class="text-base font-normal text-gray-500 dark:text-gray-400">
+						All of the pages and components are first designed in Figma and we keep a parity between
+						the two versions even as we update the project.
+					</p>
+				</TimelineItem>
+				<TimelineItem title="Application UI code in Tailwind CSS" date="April 2022">
+					<p class="text-base font-normal text-gray-500 dark:text-gray-400">
+						Get started with dozens of web components and interactive elements built on top of
+						Tailwind CSS.
+					</p>
+				</TimelineItem>
+			</Timeline>
+		</div>
+	</div>
+</main>
 
 <style lang="scss" scoped>
 </style>

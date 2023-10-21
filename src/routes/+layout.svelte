@@ -3,7 +3,7 @@
 	import Navbar from '../lib/components/Navbar.svelte';
 	import Footer from '../lib/components/SideBar.svelte';
 	import { fade } from 'svelte/transition';
-	import { page } from '$app/stores';
+	
 
 	/** @type {import('./$types').LayoutData} */
 	export let data;
@@ -12,7 +12,7 @@
 <Navbar />
 <div class="wrapper">
 	{#key data?.pathname}
-		<main class="w-full" in:fade={{ duration: 200, delay: 100 }} out:fade={{ duration: 200 }}>
+		<main class="w-full" in:fade={{ duration: 300, delay: 100 }} out:fade={{ duration: 200 }}>
 			<slot />
 		</main>
 	{/key}
@@ -20,14 +20,7 @@
 
 <Footer />
 
-<svelte:window
-	on:sveltekit:navigation-start={() => {
-		console.log('Navigation started!');
-	}}
-	on:sveltekit:navigation-end={() => {
-		console.log('Navigation ended!');
-	}}
-/>
+
 
 <style lang="scss">
 	.wrapper {
