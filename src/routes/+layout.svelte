@@ -1,7 +1,7 @@
 <script>
 	import '../app.css';
 	import Navbar from '../lib/components/Navbar.svelte';
-	import Footer from '../lib/components/SideBar.svelte';
+	import Sidebar from '../lib/components/SideBar.svelte';
 	import { fade } from 'svelte/transition';
 	
 
@@ -15,12 +15,17 @@
 		<main class="w-full" in:fade={{ duration: 300, delay: 100 }} out:fade={{ duration: 200 }}>
 			<slot />
 		</main>
-	{/key}
+		{/key}
+		<Sidebar />
 </div>
 
-<Footer />
 
 
+
+<!-- 
+
+	
+ -->
 
 <style lang="scss">
 	.wrapper {

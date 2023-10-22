@@ -1,4 +1,3 @@
-
 <script>
 	import { page } from '$app/stores';
 
@@ -18,20 +17,87 @@
 	import { GithubSolid, LinkedinSolid } from 'flowbite-svelte-icons';
 </script>
 
-<div class=" relative h-0">
+<!-- <div class=" relative h-0">
 	<div
 		id="navi"
-		class="ml-3 h-1/5 w-20 transition-transform duration-300 fixed bottom-0 space-y-4 flex-col flex z-50 left-0"
+		class="ml-3 h-1/3 w-20 transition-transform duration-300 fixed bottom-0 space-y-4 flex-col flex z-50 left-0 bg-blue-100"
 	>
+		<div class="  w-72  bg-blue-200 rotate-90 flex items-center justify-center mb-10">Tung.le0319@gmail.com</div>
+
 		<a href="https://github.com/TungLe0319" target="_blank">
-			<GithubSolid class="w-12 h-12 dark:text-indigo-300 hover:text-white dark:hover:text-gray-300 transition-all  duration-300 ease-in-out hover:-translate-y-2" />
+			<GithubSolid
+				class="w-12 h-12 dark:text-indigo-300 hover:text-white dark:hover:text-gray-300 transition-all  duration-300 ease-in-out hover:-translate-y-2"
+			/>
 		</a>
 		<a href="https://www.linkedin.com/in/tung-le0319/" target="_blank">
-			<LinkedinSolid class=" w-12 h-12 dark:text-indigo-300 hover:text-white dark:hover:text-gray-300 transition-all  duration-300 ease-in-out hover:-translate-y-2" />
+			<LinkedinSolid
+				class=" w-12 h-12 dark:text-indigo-300 hover:text-white dark:hover:text-gray-300 transition-all  duration-300 ease-in-out hover:-translate-y-2"
+			/>
+		</a>
+	</div>
+</div> -->
+
+<div class="text-center absolute bottom-0 left-0 h-1/3 w-20">
+<div class="flex flex-col">
+		<div class="rotate-90 text-center flex items-center justify-center space-x-3">
+		<a
+			href="mailto:tung.le0319@gmail.com"
+			target="_blank"
+			class="  text-2xl text-white email dark:text-indigo-600 text-shadow"
+		>
+			<p>Tung.le0319@gmail.com</p>
+		</a>
+	
+	</div>
+	<div class="mt-32 flex flex-col justify-center items-center">
+			<a href="https://github.com/TungLe0319" target="_blank">
+			<GithubSolid
+				class="w-12 h-12 text-white dark:text-indigo-300 hover:opacity-75 dark:hover:text-gray-300 transition-all  duration-300 ease-in-out hover:-translate-y-2"
+			/>
+		</a>
+		<a href="https://www.linkedin.com/in/tung-le0319/" target="_blank">
+			<LinkedinSolid
+				class=" w-12 h-12 text-white dark:text-indigo-300 hover:opacity-75 dark:hover:text-gray-300 transition-all  duration-300 ease-in-out hover:-translate-y-2"
+			/>
 		</a>
 	</div>
 </div>
+</div>
 
-<style lang="scss">
-	
+<style lang="scss" scoped>
+	.icons {
+		font-size: 10rem !important;
+	}
+
+	.email {
+		transition: all 0.5s ease-out;
+	}
+	.email:hover {
+		transform: translateX(-30px) ;
+		color: turquoise !important;
+		transition: all 0.5s ease-out;
+	}
+	.email-icon:after {
+		content: '';
+		display: block;
+		width: 1px;
+		height: 90px;
+		margin: 0px auto;
+		background-color: #fff;
+	}
+	.linkedIn-icon:after {
+		content: '';
+		display: block;
+		width: 1px;
+		height: 90px;
+		margin: 0px auto;
+		background-color: #fff;
+	}
+	i {
+		transition: all 0.5s ease-out;
+	}
+	i:hover {
+		transform: translateY(-5px);
+		color: turquoise !important;
+	}
 </style>

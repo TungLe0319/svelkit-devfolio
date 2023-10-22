@@ -22,7 +22,7 @@
 </script>
 
 {#if project}
-	<div class="my-5 py-2">
+	<div class="my-5 py-2  w-1/3 mx-3">
 		<!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
 		<div class=" hover:brightness-75 transition-all duration-150 hover:-translate-y-2">
 			<!-- <a href={project.link} target="_blank" >

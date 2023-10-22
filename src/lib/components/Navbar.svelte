@@ -1,16 +1,11 @@
 <!-- Navbar.svelte -->
 <script>
 	import { page } from '$app/stores';
-	// @ts-ignore
-	import { isDarkMode, videoSource } from '$lib/stores/landingPage.ts';
-	import { SunSolid, MoonSolid } from 'flowbite-svelte-icons';
 
+	// @ts-ignore
+	import {  videoSource } from '$lib/stores/landingPage.ts';
 	import {
-		Avatar,
-		Dropdown,
-		DropdownHeader,
-		DropdownItem,
-		DropdownDivider,
+
 		DarkMode,
 		Navbar,
 		NavBrand,
@@ -28,12 +23,7 @@
 
 	$: {
 		activeUrl = $page.url.pathname;
-		// const bodyEl = document.querySelector('body');
-		// if (bodyEl?.classList.contains('dark:bg-gray-900')) {
-		// 	$videoSource = 'src/lib/assets/animated2.mp4';
-		// } else {
-		// 	$videoSource = 'src/lib/assets/animated1.mp4';
-		// }
+
 	}
 
 	const handleChange = () => {
@@ -63,6 +53,7 @@
 		<NavUl {activeUrl} {activeClass} {nonActiveClass}>
 			<NavLi class="text-lg font-3" href="/" active={true}>Landing Page</NavLi>
 			<NavLi class="text-lg font-3" href="/about">About</NavLi>
+			<NavLi class="text-lg font-3" href="/fancy">Fancy</NavLi>
 			<NavLi class="text-lg font-3" href="/portfolio">Portfolio</NavLi>
 			<NavLi class="text-lg font-3" href="/contact">Contact</NavLi>
 		</NavUl>

@@ -1,6 +1,7 @@
 <script>
 	import HeroSectionV2 from '$lib/components/Sections/Hero/HeroSectionV2.svelte';
 	import SetupAnimation from '$lib/components/SetupAnimation.svelte';
+
 </script>
 
 <HeroSectionV2>
