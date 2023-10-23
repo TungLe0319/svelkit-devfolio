@@ -1,20 +1,27 @@
 <script lang="ts">
+	import ToggleTheme from '$lib/components/ToggleTheme.svelte';
+	import { videoPaused } from '$lib/stores/landingPage';
+	import { skillsIcons } from '$lib/stores/skills';
 
-
-	import { Badge } from 'flowbite-svelte';
+	import { Badge, Tooltip } from 'flowbite-svelte';
+	import { LinkSolid } from 'flowbite-svelte-icons';
 
 	import { sineIn } from 'svelte/easing';
 	interface Project {
 		title: string;
 		imageSrc: string;
 		description: string;
-		technologies: string[];
+		technologies: [];
 		link: string;
 	}
 	export let project: Project | null;
+	function pauseHeroVideo() {
+		$videoPaused = true;
+	}
 
-	
-
+	function startHeroVideo() {
+		$videoPaused = false;
+	}
 </script>
 
 {#if project}
@@ -25,7 +32,7 @@
 			<div class=" w-1/3 hover:brightness-75 transition-all duration-150 hover:-translate-y-2">
 				<img
 					src={project.imageSrc}
-					class=" shadow-lg shadow-zinc-700 hover:outline outline-gray-500 h-auto transition-all duration-150 hover:shadow-xl hover:cursor-pointer rounded"
+					class=" shadow-lg shadow-zinc-800 hover:outline outline-gray-500 h-auto transition-all duration-150 hover:shadow-xl hover:cursor-pointer rounded"
 					alt="Project"
 				/>
 			</div>
@@ -39,9 +46,7 @@
 				</p>
 				<div class=" flex flex-wrap gap-2 mt-2">
 					{#each project.technologies as tech}
-						<Badge large color="indigo">
-							{tech}
-						</Badge>
+						<img src={tech.src} class="w-10 h-10" alt="tech" />
 					{/each}
 				</div>
 			</div>

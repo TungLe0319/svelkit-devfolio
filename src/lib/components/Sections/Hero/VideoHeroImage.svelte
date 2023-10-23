@@ -1,43 +1,26 @@
 <script lang="ts">
 	import { browser } from '$app/environment';
 	import { page } from '$app/stores';
-	import { videoSource } from '$lib/stores/landingPage';
+	import { videoPaused, videoSource } from '$lib/stores/landingPage';
 	import { onMount } from 'svelte';
 
 	let rotateDeg = 0; // Initial rotation degree
 
-	function setRotateDegWithDelay(deg: number) {
-		setTimeout(() => {
-			rotateDeg = deg;
-		}, 150);
+	onMount(() => {
+		// if (browser) {
+		// 	document.querySelector('video').playbackRate = 0.75;
+		// }
+	});
+
+	// Function to pause the video
+	function pauseVideo() {
+		$videoPaused = true; // Set the video to paused
+		// document.querySelector('video')?.pause()
 	}
 
-
-onMount(()=>{
- if (browser) {
-	document.querySelector('video').playbackRate = 0.75;
- }
-})
-
-
-	$: {
-		switch ($page.route.id) {
-			case '/':
-				setRotateDegWithDelay(0);
-				break;
-			case '/about':
-				setRotateDegWithDelay(180);
-				break;
-			case '/portfolio':
-				setRotateDegWithDelay(0);
-				break;
-			case '/contact':
-				setRotateDegWithDelay(180);
-				break;
-			default:
-				setRotateDegWithDelay(0);
-				break;
-		}
+	// Function to play the video (if needed)
+	function playVideo() {
+		$videoPaused = false; // Set the video to playing
 	}
 </script>
 
@@ -47,14 +30,15 @@ onMount(()=>{
 			id="myVideo"
 			src={$videoSource}
 			loop
+			bind:paused={$videoPaused}
 			muted
 			autoplay
-			
 			class="object-fit"
-			style="transform: rotate({rotateDeg}deg); "
 		/>
 	</div>
-	<div class="absolute w-full h-screen overflow-y-scroll ">
+	<div class="absolute w-full h-screen overflow-y-scroll">
+		<!-- <button on:click={pauseVideo}>Pause Video</button>
+<button on:click={playVideo}>Play Video</button> -->
 		<slot />
 	</div>
 </div>
@@ -64,7 +48,7 @@ onMount(()=>{
 		object-fit: cover !important;
 		width: 100%;
 		height: 100%;
-		filter: brightness(60%);
+		filter: brightness(40%);
 	}
 	.video-container {
 		height: 100vh;

@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { browser } from '$app/environment';
-	import HeroSectionV2 from '$lib/components/Sections/Hero/HeroSectionV2.svelte';
+	import HeroSectionV2 from '$lib/components/Sections/Hero/VideoHeroImage.svelte';
 	import { onMount } from 'svelte';
 	import { Parallax, ParallaxLayer } from 'svelte-parallax';
 	import Project from '$lib/components/Sections/Portfolio/Project.svelte';
