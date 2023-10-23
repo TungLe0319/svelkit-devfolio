@@ -44,7 +44,7 @@
 			style="transform: rotate({rotateDeg}deg); "
 		/>
 	</div>
-	<div class="absolute dark:text-white">
+	<div class="absolute w-full h-screen overflow-y-scroll p-10">
 		<slot />
 	</div>
 </div>
@@ -54,7 +54,7 @@
 		object-fit: cover !important;
 		width: 100%;
 		height: 100%;
-		filter: brightness(60%);
+		filter: brightness(80%);
 	}
 	.video-container {
 		height: 100vh;

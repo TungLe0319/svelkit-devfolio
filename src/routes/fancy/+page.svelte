@@ -166,7 +166,7 @@
 
 		"
 		>
-			<div class=" flex flex-wrap px-4 justify-center items-center">
+			<div class="  ">
 				{#if projects}
 					{#each $projects as project, index}
 						<Project {project} />
@@ -175,14 +175,15 @@
 					<p>loading...</p>
 				{/if}
 			</div>
-
+<!-- 
 			<button
 				class="top-btn"
 				on:click={() => parallax.scrollTo(1, { selector: '.bottom-btn', duration: 1000 })}
 			>
 				Scroll to top
-			</button>
+			</button> -->
 		</ParallaxLayer>
+
 	</Parallax>
 {/if}
 

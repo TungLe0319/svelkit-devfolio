@@ -22,18 +22,29 @@
 </script>
 
 {#if project}
-	<div class="my-5 py-2  w-1/3 mx-3">
+
+
+
+
+
+
+	<div class="  flex  space-x-8 hover:bg-zinc-800  p-8 rounded-md outline-none border-none">
 		<!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
-		<div class=" hover:brightness-75 transition-all duration-150 hover:-translate-y-2">
+		<div class=" w-1/3 hover:brightness-75 transition-all duration-150 hover:-translate-y-2">
 			<!-- <a href={project.link} target="_blank" >
 			</a> -->
 			<!-- svelte-ignore a11y-click-events-have-key-events -->
 			<img
 				on:click={() => (hidden1 = false)}
 				src={project.imageSrc}
-				class="   shadow-gray-500 hover:shadow-gray-300 transition-all duration-150 hover:shadow-xl hover:cursor-pointer rounded shadow-lg"
+				class="   h-auto shadow-gray-500 hover:shadow-gray-300 transition-all duration-150 hover:shadow-xl hover:cursor-pointer rounded shadow-lg"
 				alt="Project"
 			/>
+		</div>
+
+
+		<div class="w-2/3 text-clip text-sm">
+		Lorem ipsum dolor sit amet consectetur adipisicing elit. A cupiditate ipsa tempora hic velit deserunt odio vel eligendi veniam aliquam aspernatur ut expedita similique quae dicta cum delectus.
 		</div>
 		<!-- <div class="w-1/2 relative order-1 p-4">
 			<div class="flex">
@@ -88,7 +99,7 @@
 				</div>
 			</div>
 			<div class=" p-2 border-0 bg-primary dark:text-white w-full">
-				<span class="font-2 text-shadow mb-1">
+				<span class="font-2 mb-1">
 					{project.description}
 				</span>
 				<div class="font-2 my-4">

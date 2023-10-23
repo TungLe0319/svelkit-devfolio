@@ -3,28 +3,21 @@
 	import { page } from '$app/stores';
 
 	// @ts-ignore
-	import {  videoSource } from '$lib/stores/landingPage.ts';
-	import {
-
-		DarkMode,
-		Navbar,
-		NavBrand,
-		NavLi,
-		NavUl,
-		NavHamburger
-	} from 'flowbite-svelte';
-	import { onMount } from "svelte";
+	import { videoSource } from '$lib/stores/landingPage.ts';
+	import { DarkMode, Navbar, NavBrand, NavLi, NavUl, NavHamburger } from 'flowbite-svelte';
+	import { onMount } from 'svelte';
 
 	let activeUrl = '';
 	let activeClass =
 		'text-white bg-green-700 md:bg-transparent md:text-orange-400 md:dark:text-orange-400 dark:bg-green-600 md:dark:bg-transparent';
 	let nonActiveClass =
-		'!text-white hover:bg-gray-100 md:hover:bg-transparent border-0 hover:text-indigo-300 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-indigo-300 dark:hover:text-white dark:hover:bg-transparent';
+		`${$page.url.pathname == "/" ? 'text-black': "text-white"} hover:bg-gray-100 md:hover:bg-transparent border-0 hover:text-indigo-300 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-indigo-300 dark:hover:text-white dark:hover:bg-transparent`;
 
 	$: {
-		activeUrl = $page.url.pathname;
-
+	 $page.url.pathname;
 	}
+
+	console.log($page.url.pathname);
 
 	const handleChange = () => {
 		const bodyEl = document.querySelector('html');
@@ -34,9 +27,9 @@
 			$videoSource = 'src/lib/assets/animated1.mp4';
 		}
 	};
-	onMount(()=>{
-		handleChange()
-	})
+	onMount(() => {
+		handleChange();
+	});
 </script>
 
 <Navbar

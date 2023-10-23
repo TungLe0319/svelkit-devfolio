@@ -16,8 +16,8 @@
 			<slot />
 		</main>
 		{/key}
-		<Sidebar />
-</div>
+	</div>
+	<Sidebar />
 
 
 
