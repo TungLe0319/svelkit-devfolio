@@ -108,7 +108,7 @@
 				<p class=" text-7xl mb-0">Design</p>
 				<div class="flex justify-center">
 					<b
-						class=" text-7xl text-center transition-all duration-200 ease hover:opacity-100 opacity-0"
+						class=" text-7xl text-center "
 						>&</b
 					>
 				</div>

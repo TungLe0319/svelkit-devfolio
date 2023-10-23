@@ -3,29 +3,22 @@
 	import Navbar from '../lib/components/Navbar.svelte';
 	import Sidebar from '../lib/components/SideBar.svelte';
 	import { fade } from 'svelte/transition';
-	
 
 	/** @type {import('./$types').LayoutData} */
 	export let data;
 </script>
 
-<Navbar />
+<!-- <Navbar /> -->
 <div class="wrapper">
 	{#key data?.pathname}
 		<main class="w-full" in:fade={{ duration: 300, delay: 100 }} out:fade={{ duration: 200 }}>
 			<slot />
 		</main>
-		{/key}
-	</div>
-	<Sidebar />
+	{/key}
+</div>
+<Sidebar />
 
 
-
-
-<!-- 
-
-	
- -->
 
 <style lang="scss">
 	.wrapper {

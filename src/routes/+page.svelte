@@ -1,5 +1,6 @@
 <script lang="ts">
-	import HeroSectionV2 from '$lib/components/Sections/Hero/HeroSectionV2.svelte';
+	import EducationSection from '$lib/components/Sections/Education/EducationSection.svelte';
+import HeroSectionV2 from '$lib/components/Sections/Hero/HeroSectionV2.svelte';
 	import Project from '$lib/components/Sections/Portfolio/Project.svelte';
 	import ProjectCard from "$lib/components/Sections/Portfolio/ProjectCard.svelte";
 	import SetupAnimation from '$lib/components/SetupAnimation.svelte';
@@ -97,20 +98,20 @@
 </script>
 
 <HeroSectionV2>
-<div class="flex justify-center items-center flex-col relative">
-		<div class="pt-10 mt-10 mb-5  text-white dark:text-indigo-500  w-1/2 ">
-		<div class=" font-1 mb-4">
+<div class="flex justify-center items-center flex-col relative ">
+		<div class="pt-10 mt-24  text-white dark:text-indigo-500  w-1/2 ">
+		<div class=" font-1 mb-16">
 			<div class="">
-				<p class="text-start text-3xl ">Creative</p>
+				<p class="text-start text-3xl  text-shadow">Creative</p>
 
-				<p class=" text-7xl mb-0 ">Design</p>
+				<p class=" text-7xl mb-0  text-shadow">Design</p>
 				<div class="flex justify-center">
-					<b class=" text-7xl text-center transition-all duration-200 ease hover:opacity-100 opacity-0">&</b>
+					<b class=" text-7xl text-center text-shadow text-indigo-400">&</b>
 				</div>
 				<div class=" flex flex-col items-end">
-					<p class="text-start text-3xl ">Collabarative</p>
+					<p class="text-start text-3xl  text-shadow">Collabarative</p>
 
-					<p class="text-7xl e mb-0 ">Developer</p>
+					<p class="text-7xl e mb-0  text-shadow">Developer</p>
 				</div>
 			</div>
 		</div>
@@ -121,15 +122,49 @@
 
 
 
-	<div class=" relative flex px-16">
+	<div class=" relative flex px-16 space-x-3">
+
+
+
+
  <div class="w-1/2   ">
-<div class="sticky top-10">
-	<h1>ABOUT</h1>
-<h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe quod voluptates culpa quas quisquam libero dignissimos quos doloribus, molestiae cupiditate ratione debitis odit qui beatae, vero praesentium nulla asperiores consectetur aliquam nostrum, quam assumenda architecto aliquid cum? Omnis voluptate, impedit assumenda nisi necessitatibus architecto itaque! Repudiandae voluptate quia ullam, adipisci commodi quos nam vitae modi officiis eius odit quas earum aut, fuga illum vel. Voluptas rem explicabo rerum soluta aspernatur accusamus est, suscipit sit deserunt voluptatibus. Dolor ratione provident repellendus itaque a perferendis quo esse saepe omnis quas iure nulla fugiat nostrum unde magni, fuga nam, corporis aliquid? Nesciunt, similique?</h2>
+<div class="sticky top-24 p-4 bg-opacity-80  bg-zinc-800  rounded-md text-white">
+<p class="font-2 mb-2 ">Hi, my name is
+</p>
+<p class="text-4xl font-1 text-indigo-400">Tung Le.</p>
+<p class="font-2 my-2">
+I'm a skilled software engineer with expertise in crafting exceptional UI/UX designs and creating immersive digital experiences. My current focus is on expanding my knowledge by mastering innovative frameworks like Svelte and Nuxt, allowing me to build cutting-edge, accessible, and beautifully styled webpages and applications.
+</p>
+<p class="text-4xl font-1 text-end text-indigo-400">Open to work.</p>
+
+
+
 </div>
 </div>
 
-<div class="w-1/2 p-8 flex flex-col items-center just-center">
+<div class="w-1/2   flex flex-col items-center just-center">
+
+
+<EducationSection/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="text-4xl text-white font-1 text-shadow"> Projects</div>
+
 {#if projects}
   {#each $projects as project, index}
 	<Project {project} />

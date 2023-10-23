@@ -2,6 +2,7 @@
 	import { browser } from '$app/environment';
 	import { page } from '$app/stores';
 	import { videoSource } from '$lib/stores/landingPage';
+	import { onMount } from 'svelte';
 
 	let rotateDeg = 0; // Initial rotation degree
 
@@ -10,6 +11,14 @@
 			rotateDeg = deg;
 		}, 150);
 	}
+
+
+onMount(()=>{
+ if (browser) {
+	document.querySelector('video').playbackRate = 0.75;
+ }
+})
+
 
 	$: {
 		switch ($page.route.id) {
@@ -40,11 +49,12 @@
 			loop
 			muted
 			autoplay
+			
 			class="object-fit"
 			style="transform: rotate({rotateDeg}deg); "
 		/>
 	</div>
-	<div class="absolute w-full h-screen overflow-y-scroll p-10">
+	<div class="absolute w-full h-screen overflow-y-scroll ">
 		<slot />
 	</div>
 </div>
@@ -54,7 +64,7 @@
 		object-fit: cover !important;
 		width: 100%;
 		height: 100%;
-		filter: brightness(80%);
+		filter: brightness(60%);
 	}
 	.video-container {
 		height: 100vh;

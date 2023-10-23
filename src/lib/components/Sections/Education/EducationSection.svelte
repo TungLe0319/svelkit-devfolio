@@ -1,31 +1,71 @@
 <script lang="ts">
-	import { Timeline, TimelineItem, Button } from 'flowbite-svelte';
+	import { Timeline, TimelineItem, Button, Badge } from 'flowbite-svelte';
+	import { LinkSolid } from 'flowbite-svelte-icons';
 
-	import { ArrowRightOutline } from 'flowbite-svelte-icons';
+	const dataSet =[
+		 {
+		date: 'JAN - MAR 2022',
+		title: 'RiaFox',
+		description:
+			'Graduated  in the top 1% of the cohort for a full-stack development bootcamp, learned CSS,HTML,Javascript fundamentals, DOM manipulations, Props, Building and intergrating REST APIs',
+		link: 'https://boisecodeworks.com/',
+		tech: [
+			'Angular',
+			'TypeScript',
+			'ClickUp',
+			'HTML',
+			"CSS",
+			"Nest",
+		]
+	},
+		 {
+		date: 'AUG - NOV 2021',
+		title: 'Boise CodeWorks',
+		description:
+			'Graduated  in the top 1% of the cohort for a full-stack development bootcamp, learned CSS,HTML,Javascript fundamentals, DOM manipulations, Props, Building and intergrating REST APIs',
+		link: 'https://boisecodeworks.com/',
+		tech: [
+			'CSS',
+			'HTML',
+			'JavaScript',
+			'C#',
+			'MySQL',
+			'Vue',
+			'NetCore',
+			'BootStrap',
+			'MondoDB',
+			'Auth0'
+		]
+	},
+	];
 </script>
 
-<div class=" w-full locomotive-section" >
-	<div class=" text-6xl font-1 dark:text-white">Education and Certificates</div>
-	<Timeline>
-		<TimelineItem title="Application UI code in Tailwind CSS" date="February 2022">
-			<p class="mb-4 text-base font-normal text-gray-500 dark:text-gray-400">
-				Get access to over 20+ pages including a dashboard layout, charts, kanban board, calendar,
-				and pre-order E-commerce & Marketing pages.
+<div class=" w-full locomotive-section">
+	<div class=" text-3xl font-1 text-white mb-4 text-shadow">Education and Certificates</div>
+	<Timeline classTime="text-white">
+
+{#each dataSet as data}
+
+		<TimelineItem>
+			<p class="text-sm text-white">{data.date}</p>
+			<div class="flex items-center space-x-2 text-indigo-400">
+				<p class="text-indigo-400 font-1 text-xl my-2 text-shadow">{data.title}</p>
+				<LinkSolid />
+			</div>
+			<p class="mb-4 text-base font-normal text-white dark:text-gray-400">
+				{data.description}
 			</p>
-			<Button color="alternative">Learn more<ArrowRightOutline class="ml-2 w-3 h-3" /></Button>
+
+			<div class="flex flex-wrap gap-2">
+				{#each data.tech as tech}
+					<Badge large border color="indigo">{tech}</Badge>
+				{/each}
+			</div>
 		</TimelineItem>
-		<TimelineItem title="Application UI code in Tailwind CSS" date="March 2022">
-			<p class="text-base font-normal text-gray-500 dark:text-gray-400">
-				All of the pages and components are first designed in Figma and we keep a parity between the
-				two versions even as we update the project.
-			</p>
-		</TimelineItem>
-		<TimelineItem title="Application UI code in Tailwind CSS" date="April 2022">
-			<p class="text-base font-normal text-gray-500 dark:text-gray-400">
-				Get started with dozens of web components and interactive elements built on top of Tailwind
-				CSS.
-			</p>
-		</TimelineItem>
+{/each}
+
+
+
 	</Timeline>
 </div>
 

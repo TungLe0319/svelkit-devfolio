@@ -8,7 +8,7 @@
 	// @ts-ignore
 	import { interpolateRound } from 'd3-interpolate';
 	import { marked } from 'marked';
-	import highlight from './highlight';
+	import highlight from '../stores/highlight';
 
 	const commands = [
 		{
@@ -59,7 +59,7 @@
 
 <main>
 	<Screen
-		class="screen !bg-gray-900 !text-gray-300  "
+		class="screen !bg-zinc-800 !text-gray-300  "
 		title="Terminal"
 	>
 		<div class="wrapper">
@@ -103,7 +103,7 @@
 		--screen-shadow-color: transparent;
 		--width: 600px;
 		--height: 250px;
-		--purple: #a281ff66;
+		--purple: #8da1fb80;
 	}
 	main :global(.screen) {
 		width: var(--width);
@@ -158,7 +158,7 @@
 
 	.command :global(b) {
 		font-style: normal;
-		color: #665dbb;
+		color: #8da2fb
 	}
 
 	.cursor {
@@ -185,7 +185,7 @@
 	}
 
 	.caption {
-		color: #222;
+		color: #5b5892;
 		height: 6rem;
 		display: flex;
 		align-items: center;
@@ -198,8 +198,8 @@
 		justify-content: center;
 		padding: 5px 10px;
 		border-radius: 2px;
-		background: #eee;
-		border: solid 1px #5552;
+		background: #e5edff;
+		border: solid 1px #8da2fb;
 		font-size: 1.2rem;
 	}
 	.caption :global(p) {
