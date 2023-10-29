@@ -4,24 +4,7 @@
 	import { videoPaused, videoSource } from '$lib/stores/landingPage';
 	import { onMount } from 'svelte';
 
-	let rotateDeg = 0; // Initial rotation degree
 
-	onMount(() => {
-		// if (browser) {
-		// 	document.querySelector('video').playbackRate = 0.75;
-		// }
-	});
-
-	// Function to pause the video
-	function pauseVideo() {
-		$videoPaused = true; // Set the video to paused
-		// document.querySelector('video')?.pause()
-	}
-
-	// Function to play the video (if needed)
-	function playVideo() {
-		$videoPaused = false; // Set the video to playing
-	}
 </script>
 
 <div class=" relative flex flex-col justify-center items-center">
@@ -37,11 +20,10 @@
 		/>
 	</div>
 	<div class="absolute w-full h-screen overflow-y-scroll">
-		<!-- <button on:click={pauseVideo}>Pause Video</button>
-<button on:click={playVideo}>Play Video</button> -->
 		<slot />
 	</div>
 </div>
+
 
 <style lang="scss" scoped>
 	video {

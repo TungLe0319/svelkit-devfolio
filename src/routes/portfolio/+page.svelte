@@ -35,7 +35,7 @@
 		<div class=" ">
 			<div class=" flex flex-wrap justify-center items-center">
 				{#each $projects as project, index}
-					<ProjectCard {project} />
+					<Project {project} />
 				{/each}
 			</div>
 		</div>

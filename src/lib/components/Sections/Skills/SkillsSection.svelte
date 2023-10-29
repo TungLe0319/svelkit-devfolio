@@ -1,30 +1,56 @@
 <script lang="ts">
 	import { skillsIcons } from '$lib/stores/skills';
-	import { Timeline, TimelineItem, Button, Gallery, Tooltip } from 'flowbite-svelte';
-	import { ArrowRightOutline, IconSolid, LinkSolid } from 'flowbite-svelte-icons';
-	
+	import { Tooltip} from 'flowbite-svelte';
+		import { fade, fly, slide, scale, blur } from "svelte/transition";
+	import * as eases from "svelte/easing";
 
 
 </script>
 
-<div class=" pt-8 w-full   -z-10" >
-	<!-- <div class=" text-6xl font-1">Skills</div> -->
-	<div class="flex flex-wrap gap-3 justify-center items-center">
+<div class=" pt-8 w-full -z-10">
+	<div class="flex flex-wrap gap-1 justify-center items-center">
 		{#each $skillsIcons as icon, index}
-		<a href={icon.src} target="_blank" class="hover:bg-indigo-400  transition-all duration-300 p-2 rounded-full">
-			<img src={icon.src} class="w-16 h-16" alt="Icon" />
-			<Tooltip color="indigo">
-			<div class="flex space-x-2 items-center">
-			<p>		{icon.title}</p>
-				<LinkSolid size="sm"/>
+			<div class="hover:bg-indigo-400 transition-all duration-300 p-2 rounded-full">
+				<img src={icon.src} class="w-12 h-12" alt="Icon" />
+				<Tooltip color="indigo">
+					<p>{icon.title}</p>
+				</Tooltip>
 			</div>
-			</Tooltip>
-		</a>
 		{/each}
 	</div>
-	
-	<!-- <Gallery items={skillsIcons} class="gap-4 grid-cols-2  md:grid-cols-12" /> -->
+
+
 </div>
 
+<style>
+		section {
+	  display: flex;
+	  flex-wrap: wrap;
+	  justify-content: center;
+	  gap: 2rem;
+	  margin-top: 5rem;
+	}
 
-<style></style>
+	.controls {
+	  display: flex;
+	  justify-content: center;
+	  gap: 2rem;
+	  font-family: sans-serif;
+	}
+
+	.input-group {
+	  display: flex;
+	  flex-direction: column;
+	  align-items: baseline;
+	  gap: 0.5rem;
+	}
+
+	.box {
+	  width: 100px;
+	  height: auto;
+	  aspect-ratio: 1 / 1;
+	  background: goldenrod;
+	  border-radius: 10px;
+	  box-shadow: 1px 3px 6px 1px lightgrey;
+	}
+</style>

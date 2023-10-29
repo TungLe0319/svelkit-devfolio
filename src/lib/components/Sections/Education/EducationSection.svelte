@@ -56,7 +56,7 @@
 </script>
 
 <div class=" w-full locomotive-section">
-	<div class=" text-3xl font-1 text-white mb-4 text-shadow">Education and Certificates</div>
+	<div class=" text-3xl font-1 text-white mb-10 text-shadow">Education and Certificates</div>
 	<Timeline classTime="text-white">
 
 {#each dataSet as data}
@@ -65,15 +65,15 @@
 			<p class="text-sm text-white">{data.date}</p>
 			<div class="flex items-center space-x-2 text-indigo-400">
 				<p class="text-indigo-400 font-1 text-xl my-2 text-shadow">{data.title}</p>
-				<LinkSolid />
+			
 			</div>
-			<p class="mb-4 text-base font-normal text-white dark:text-gray-400">
+			<p class="mb-4  font-normal text-white text-sm dark:text-gray-400">
 				{data.description}
 			</p>
 
 			<div class="flex flex-wrap gap-2">
 				{#each data.tech as tech}
-					<Badge large border color="indigo">{tech}</Badge>
+					<Badge large border color="indigo" class="hover:-translate-y-2 transition-all duration-300 cursor-pointer">{tech}</Badge>
 				{/each}
 			</div>
 		</TimelineItem>
