@@ -1,22 +1,25 @@
-<script>
+<script lang="ts">
 
 import '../app.css';
 
 	import Sidebar from '../lib/components/SideBar.svelte';
 	import { fade } from 'svelte/transition';
+	import type { LayoutData } from './$types';
 
 	/** @type {import('./$types').LayoutData} */
-	export let data;
+	export let data : LayoutData;
+
+	
+
 </script>
 
-<!-- <Navbar /> -->
+
 <div class="wrapper">
 	{#key data?.pathname}
 		<main class="w-full" in:fade={{ duration: 300, delay: 100 }} out:fade={{ duration: 200 }}>
-			<slot />
+			<slot  />
 		</main>
 	{/key}
-	<!-- <ProgressBar/> -->
 	
 </div>
 <Sidebar />

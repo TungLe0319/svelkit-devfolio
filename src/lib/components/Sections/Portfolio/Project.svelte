@@ -1,29 +1,25 @@
 <script lang="ts">
-	import ToggleTheme from '$lib/components/ToggleTheme.svelte';
-	import { videoPaused } from '$lib/stores/landingPage';
-	import { skillsIcons } from '$lib/stores/skills';
+	import type { ProjectItem } from '$lib/models/models';
+	import {  Tooltip } from 'flowbite-svelte';
 
-	import { Badge, Tooltip } from 'flowbite-svelte';
-	import { LinkSolid } from 'flowbite-svelte-icons';
-
-	import { sineIn } from 'svelte/easing';
-
-	export let project: any;
+	export let project:ProjectItem
 </script>
 
 {#if project}
 	<a href={project.link} target="_blank">
 		<div
-			class="  group lg:flex space-x-8 card hover:bg-opacity-100 bg-zinc-950 bg-opacity-50 hover:bg-indigo-500/30   hover:border-indigo-400 hover:border my-3 lg:p-0 rounded-md outline-none transition-all duration-100"
+			class="  group lg:flex space-x-8 card hover:bg-opacity-100 bg-zinc-950 bg-opacity-50 hover:bg-indigo-500/30 hover:border-indigo-400 hover:border my-3 lg:p-0 rounded-md outline-none transition-all duration-100"
 		>
-			<div class=" lg:w-1/3 hover:brightness-75 transition-all duration-150 group-hover:-translate-y-2">
+			<div
+				class=" lg:w-1/3 hover:brightness-75 transition-all duration-150 group-hover:-translate-y-2"
+			>
 				<img
-					src={project.imageSrc}
+					src={project.src}
 					class=" shadow-lg shadow-zinc-800 hover:outline outline-indigo-400 h-auto transition-all duration-150 hover:shadow-xl hover:cursor-pointer rounded"
 					alt="Project"
 				/>
 				<div class=" flex flex-wrap gap-2 mt-2 p-2">
-					{#each project.technologies as tech}
+					{#each project.tech as tech}
 						<img src={tech.src} class="w-8 h-8" alt="tech" />
 						<Tooltip placement="bottom" color="indigo">{tech.title}</Tooltip>
 					{/each}
@@ -42,13 +38,13 @@
 	</a>
 {/if}
 
-<style>
+<style scoped>
 	.card {
 		transition: all 0.25s ease;
 	}
 	.card:hover {
 		transition: all 0.25s ease;
-		backdrop-filter: blur(8px)
+		backdrop-filter: blur(8px);
 	}
 
 	.title {

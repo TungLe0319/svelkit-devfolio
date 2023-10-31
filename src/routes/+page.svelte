@@ -3,12 +3,14 @@
 	import VideoHeroImage from '$lib/components/Sections/Hero/VideoHeroImage.svelte';
 	import Project from '$lib/components/Sections/Portfolio/Project.svelte';
 	import SkillsSection from '$lib/components/Sections/Skills/SkillsSection.svelte';
-	import { projects } from '$lib/stores/projects';
 	import Typewriter from 'svelte-typewriter';
 	import Footer from '$lib/components/Footer.svelte';
-	import ParallaxProjects from '$lib/components/ParallaxProjects.svelte';
 
+import type {ProjectList} from '../lib/models/models'
 
+	export let data;
+	const projects = data.projects 
+	const skills = data.skillsIcons
 </script>
 
 <VideoHeroImage>
@@ -44,35 +46,33 @@
 			<!-- <MacTerminal /> -->
 		</div>
 
-		<div class=" relative lg:flex lg:px-16 space-x-3 px-5 text-white ">
+		<div class=" relative lg:flex lg:px-16 space-x-3 px-5 text-white">
 			<div class="lg:w-1/2 p-10">
 				<div class="sticky top-24">
 					<div class="p-4 bg-zinc-900 bg-opacity-80 rounded">
 						<p class="font-2 mb-2">Hi, my name is</p>
 						<p class="text-4xl font-1 text-indigo-400">Tung Le.</p>
-						
-							<p class="font-2 my-2">
-								I'm a skilled software engineer with expertise in crafting exceptional UI/UX designs
-								and creating immersive digital experiences. My current focus is on expanding my
-								knowledge by mastering innovative frameworks like Svelte and Nuxt, allowing me to
-								build cutting-edge, accessible, and beautifully styled webpages and applications.
-							</p>
+
+						<p class="font-2 my-2">
+							I'm a skilled software engineer with expertise in crafting exceptional UI/UX designs
+							and creating immersive digital experiences. My current focus is on expanding my
+							knowledge by mastering innovative frameworks like Svelte and Nuxt, allowing me to
+							build cutting-edge, accessible, and beautifully styled webpages and applications.
+						</p>
 						<p class="text-4xl font-1 text-end text-indigo-400">Open to work.</p>
 					</div>
 
 					<div class="">
-						<SkillsSection />
-				
+						<SkillsSection {skills} />
 					</div>
 				</div>
 			</div>
 
-			<div class="lg:w-1/2 flex flex-col items-center just-center lg:p-5 ">
+			<div class="lg:w-1/2 flex flex-col items-center just-center lg:p-5">
 				<EducationSection />
 
 				<div class="text-4xl text-white font-1 text-shadow my-10">Projects</div>
-
-				{#each $projects as project, index}
+				{#each projects as project, index (project.title)}
 					<Project {project} />
 				{/each}
 			</div>
@@ -80,11 +80,8 @@
 
 		<Footer />
 	</div>
-
-
-
-	
 </VideoHeroImage>
+
 <!-- <ParallaxProjects/> -->
 
 <style lang="scss">
