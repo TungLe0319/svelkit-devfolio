@@ -6,6 +6,8 @@
 	import { projects } from '$lib/stores/projects';
 	import Typewriter from 'svelte-typewriter';
 	import Footer from '$lib/components/Footer.svelte';
+	import ParallaxProjects from '$lib/components/ParallaxProjects.svelte';
+
 
 </script>
 
@@ -42,8 +44,8 @@
 			<!-- <MacTerminal /> -->
 		</div>
 
-		<div class=" relative flex px-16 space-x-3 text-white">
-			<div class="w-1/2 p-10">
+		<div class=" relative lg:flex lg:px-16 space-x-3 px-5 text-white ">
+			<div class="lg:w-1/2 p-10">
 				<div class="sticky top-24">
 					<div class="p-4 bg-zinc-900 bg-opacity-80 rounded">
 						<p class="font-2 mb-2">Hi, my name is</p>
@@ -60,11 +62,12 @@
 
 					<div class="">
 						<SkillsSection />
+				
 					</div>
 				</div>
 			</div>
 
-			<div class="w-1/2 flex flex-col items-center just-center p-5">
+			<div class="lg:w-1/2 flex flex-col items-center just-center lg:p-5 ">
 				<EducationSection />
 
 				<div class="text-4xl text-white font-1 text-shadow my-10">Projects</div>
@@ -79,7 +82,10 @@
 	</div>
 
 
+
+	
 </VideoHeroImage>
+<!-- <ParallaxProjects/> -->
 
 <style lang="scss">
 </style>

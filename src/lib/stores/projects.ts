@@ -4,12 +4,16 @@ export const projects = writable([
 	{
 		title: 'Tauri Note Taker',
 		imageSrc:
-			'https://media.discordapp.net/attachments/1060066788878069891/1165068659912355990/image.png?ex=654581be&is=65330cbe&hm=430d46aed7750e097cf44cc1d98cf76596700d00cbe0e72e64a4f70784cef630&=&width=720&height=368',
+			'https://cdn.discordapp.com/attachments/262286883000811520/1168759358155411456/tauri-notetaker.png?ex=6552eef9&is=654079f9&hm=b6f44757ecc51d7ed3e824f24582c8f01f44dc1fd3e75727a867794aa3484831&',
 		description: `Application built in Tauri to create a NoteTaker for customer service and remote calls, has Templates for common situations, changeable Color themes, Clipboard watch for specified details like phone and email`,
 		technologies: [
 			{
 				title: 'Svelte',
 				src: 'https://imgs.search.brave.com/AtFnftxXfySR-pIt0LrD64jshxNlrFjMfr9etQbLNAU/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9yYXcu/Z2l0aHVidXNlcmNv/bnRlbnQuY29tL2dp/bGJhcmJhcmEvbG9n/b3MvbWFpbi9sb2dv/cy9zdmVsdGUtaWNv/bi5zdmc.svg'
+			},
+			{
+				title: 'Tauri',
+				src: 'https://imgs.search.brave.com/a79Yiib4IUfOZLCGQO3D5b_FLSyQqK3ibvCTsOw8VeU/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9yYXcu/Z2l0aHVidXNlcmNv/bnRlbnQuY29tL3Rh/dXJpLWFwcHMvdGF1/cmkvSEVBRC9hcHAt/aWNvbi5wbmc'
 			},
 
 			{
@@ -17,16 +21,8 @@ export const projects = writable([
 				src: 'https://media.zeemly.com/zeemly/product/tailwind-css.png'
 			},
 			{
-				title: 'Auth.js',
-				src: 'https://authjs.dev/img/logo/logo-sm.webp'
-			},
-			{
-				title: 'Prisma.io',
-				src: 'https://imgs.search.brave.com/KhQAV89DalGsyHLIk36WzppNhJCg02NbIehcQjuSTeU/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9pY29u/cy52ZXJ5aWNvbi5j/b20vcG5nL28vYnVz/aW5lc3MvdnNjb2Rl/LXByb2dyYW0taXRl/bS1pY29uL3ByaXNt/YS5wbmc'
-			},
-			{
-				title: 'PostgreSQL',
-				src: 'https://cdn.freebiesupply.com/logos/thumbs/2x/postgresql-logo.png'
+				title: 'SQL',
+				src: 'https://imgs.search.brave.com/pEaNgdvgk50pNK8uwxPf05nM-6uGouAfTsJg61aupF4/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9zdGF0/aWMtMDAuaWNvbmR1/Y2suY29tL2Fzc2V0/cy4wMC9zcWwtaWNv/bi01MTJ4NTA1LXM4/NzhuOWN0LnBuZw'
 			}
 		],
 		link: 'https://svelte-blog.tung.devopportunities.dev/'
@@ -141,7 +137,39 @@ export const projects = writable([
 				src: 'https://seeklogo.com/images/P/pocketbase-logo-CA73994F09-seeklogo.com.png'
 			}
 		],
+
 		link: 'https://www.samadhiyogaidaho.com/#/'
+	},
+
+	{
+		title: 'NextFire',
+		imageSrc:
+			'https://cdn.discordapp.com/attachments/1060066788878069891/1063581265971904593/Screenshot_2023-01-13_at_3.11.41_PM.png?ex=654eaabe&is=653c35be&hm=ba3d4cff1a6f382ec74bcaec7d7f236a1534228cf1f3b9efa4ab53a8fc9f1e1e&',
+		description: `  SPA app designed to help people get together with other users for
+              events as well as create them. VueJs with Vue-Router for the
+              client. Express with Node.js and MongoDB with Mongoose to manage
+              database and handling relationships of both one to many, and many
+              to many objects. Identity management with Auth0.`,
+		technologies: [
+			{
+				title: 'React',
+				src: 'https://imgs.search.brave.com/qlFAtMUjOJ06EBhykDOXGUrmQ4UM2GdOmNiPAzXjS5w/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9sb2dv/cy1kb3dubG9hZC5j/b20vd3AtY29udGVu/dC91cGxvYWRzLzIw/MTYvMDkvUmVhY3Rf/bG9nb19sb2dvdHlw/ZV9lbWJsZW0tNzAw/eDYyNi5wbmc'
+			},
+			{
+				title: 'Next.js',
+				src: 'https://seeklogo.com/images/N/next-js-icon-logo-EE302D5DBD-seeklogo.com.png'
+			},
+
+			{
+				title: 'FireBase',
+				src: 'https://cdn4.iconfinder.com/data/icons/google-i-o-2016/512/google_firebase-2-512.png'
+			},
+			{
+				title: 'TailWind CSS',
+				src: 'https://media.zeemly.com/zeemly/product/tailwind-css.png'
+			}
+		],
+		link: 'https://next-fire.tung.devopportunities.dev/'
 	},
 	{
 		title: 'Better After Books',
@@ -200,35 +228,5 @@ export const projects = writable([
 			}
 		],
 		link: 'https://keepr-project-demo.onrender.com'
-	},
-	{
-		title: 'NextFire',
-		imageSrc:
-			'https://cdn.discordapp.com/attachments/1060066788878069891/1060067418464075877/TowerSS.png',
-		description: `  SPA app designed to help people get together with other users for
-              events as well as create them. VueJs with Vue-Router for the
-              client. Express with Node.js and MongoDB with Mongoose to manage
-              database and handling relationships of both one to many, and many
-              to many objects. Identity management with Auth0.`,
-		technologies: [
-			{
-				title: 'React',
-				src: 'https://imgs.search.brave.com/qlFAtMUjOJ06EBhykDOXGUrmQ4UM2GdOmNiPAzXjS5w/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9sb2dv/cy1kb3dubG9hZC5j/b20vd3AtY29udGVu/dC91cGxvYWRzLzIw/MTYvMDkvUmVhY3Rf/bG9nb19sb2dvdHlw/ZV9lbWJsZW0tNzAw/eDYyNi5wbmc'
-			},
-			{
-				title: 'Next.js',
-				src: 'https://seeklogo.com/images/N/next-js-icon-logo-EE302D5DBD-seeklogo.com.png'
-			},
-
-			{
-				title: 'FireBase',
-				src: 'https://cdn4.iconfinder.com/data/icons/google-i-o-2016/512/google_firebase-2-512.png'
-			},
-			{
-				title: 'TailWind CSS',
-				src: 'https://media.zeemly.com/zeemly/product/tailwind-css.png'
-			}
-		],
-		link: 'https://next-fire.tung.devopportunities.dev/'
 	}
 ]);

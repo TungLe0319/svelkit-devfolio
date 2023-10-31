@@ -11,7 +11,7 @@
 	<div class="flex flex-wrap gap-1 justify-center items-center">
 		{#each $skillsIcons as icon, index}
 			<div class="hover:bg-indigo-500/60 transition-all duration-300 p-2 rounded-full">
-				<img src={icon.src} class="w-12 h-12" alt="Icon" />
+				<img src={icon.src} class="lg:w-12 lg:h-12 h-8 w-8" alt="Icon" />
 				<Tooltip color="indigo">
 					<p>{icon.title}</p>
 				</Tooltip>

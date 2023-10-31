@@ -26,8 +26,8 @@ function handleScroll(event) {
 
 
 	</div>
-	<div class="absolute w-full h-screen overflow-y-scroll" onscroll="{handleScroll}">
-		<ProgressBar/>
+	<div class="absolute w-full h-screen overflow-y-scroll" >
+		<!-- <ProgressBar/> -->
 		<slot />
 	</div>
 </div>
