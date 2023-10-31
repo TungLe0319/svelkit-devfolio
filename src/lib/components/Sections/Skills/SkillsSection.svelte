@@ -6,7 +6,7 @@
 	export let skills: TechList;
 </script>
 
-<div class=" pt-8 w-full -z-10">
+<div class="  w-1/2 ">
 	<div class="flex flex-wrap gap-1 justify-center items-center">
 		{#each skills as icon, index}
 			<div class="hover:bg-indigo-500/60 transition-all duration-300 p-2 rounded-full">

@@ -16,12 +16,7 @@
 					class=" project-img"
 					alt="Project"
 				/>
-				<div class=" flex flex-wrap gap-2 mt-2 p-2">
-					{#each project.tech as tech}
-						<img src={tech.src} class="w-8 h-8" alt="tech" />
-						<Tooltip placement="bottom" color="indigo">{tech.title}</Tooltip>
-					{/each}
-				</div>
+			
 			</div>
 
 			<div class="lg:w-2/3 text-sm p-4 !m-0 lg:ml-32">
@@ -31,6 +26,12 @@
 				<p class="description text-white">
 					{project.description}
 				</p>
+					<div class=" flex flex-wrap gap-2 p-2">
+					{#each project.tech as tech}
+						<img src={tech.src} class="w-8 h-8" alt="tech" />
+						<Tooltip placement="bottom" color="indigo">{tech.title}</Tooltip>
+					{/each}
+				</div>
 			</div>
 		</div>
 	</a>

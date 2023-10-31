@@ -55,7 +55,7 @@ Proficiently designing and managing databases, with a focus on MySQL.`,
 </script>
 
 <div class="w-full flex justify-center flex-col items-center" >
-	<div class=" text-3xl font-1 text-white mb-10 text-shadow">Education and Certificates</div>
+	<div class=" text-5xl font-1 text-white mb-10 text-shadow">Experience</div>
 	<Timeline classTime="text-white">
 		{#each dataSet as data}
 			<TimelineItem>
