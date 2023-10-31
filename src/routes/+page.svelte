@@ -1,8 +1,8 @@
 <script lang="ts">
-	import EducationSection from '$lib/components/Sections/Experience/EducationSection.svelte';
-	import VideoHeroImage from '$lib/components/Sections/Hero/VideoHeroImage.svelte';
-	import Project from '$lib/components/Sections/Portfolio/Project.svelte';
-	import SkillsSection from '$lib/components/Sections/Skills/SkillsSection.svelte';
+	import EducationSection from '$lib/components/EducationSection.svelte';
+	import VideoHeroImage from '$lib/components/VideoHeroImage.svelte';
+	import Project from '$lib/components/Project.svelte';
+	import SkillsSection from '$lib/components/SkillsSection.svelte';
 	import Typewriter from 'svelte-typewriter';
 	import Footer from '$lib/components/Footer.svelte';
 

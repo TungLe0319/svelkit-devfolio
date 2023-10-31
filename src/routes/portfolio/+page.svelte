@@ -3,8 +3,8 @@
 	import { setContext } from 'svelte';
 
 	import { Gallery } from 'flowbite-svelte';
-	import Project from '$lib/components/Sections/Portfolio/Project.svelte';
-	import HeroSectionV2 from '$lib/components/Sections/Hero/VideoHeroImage.svelte';
+	import Project from '$lib/components/Project.svelte';
+	import HeroSectionV2 from '$lib/components/VideoHeroImage.svelte';
 	import { projects } from '$lib/stores/projects';
 
 </script>

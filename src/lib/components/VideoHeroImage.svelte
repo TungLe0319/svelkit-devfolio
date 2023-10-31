@@ -5,7 +5,7 @@
 	import { videoPaused, videoSource } from '$lib/stores/landingPage';
 	import { onMount } from 'svelte';
 let y = 0
-function handleScroll(event) {
+function handleScroll(event:any) {
     y = event.target.scrollTop;
 		console.log(y);
 		

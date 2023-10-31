@@ -1,9 +1,9 @@
 <script lang="ts">
 	import { browser } from '$app/environment';
-	import HeroSectionV2 from '$lib/components/Sections/Hero/VideoHeroImage.svelte';
+	import HeroSectionV2 from '$lib/components/VideoHeroImage.svelte';
 	import { onMount } from 'svelte';
 	import { Parallax, ParallaxLayer } from 'svelte-parallax';
-	import Project from '$lib/components/Sections/Portfolio/Project.svelte';
+	import Project from '$lib/components/Project.svelte';
 	import { writable } from 'svelte/store';
 	import { videoPaused, videoSource } from '$lib/stores/landingPage';
 	let parallax: Parallax;

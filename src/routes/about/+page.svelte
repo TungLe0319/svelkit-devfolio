@@ -1,5 +1,5 @@
 <script lang="ts">
-	import HeroSectionV2 from '$lib/components/Sections/Hero/VideoHeroImage.svelte';
+	import HeroSectionV2 from '$lib/components/VideoHeroImage.svelte';
 import { Timeline, TimelineItem, Button } from 'flowbite-svelte';
 	import { ArrowRightOutline, CalendarWeekSolid } from 'flowbite-svelte-icons';
 
