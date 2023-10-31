@@ -13,7 +13,7 @@
 </script>
 
 {#if project}
-	<a href={project.link}>
+	<a href={project.link} target="_blank">
 		<div
 			class="  group flex space-x-8 card hover:bg-opacity-100 bg-zinc-950 bg-opacity-50 hover:bg-indigo-900 hover:border-indigo-400 hover:border my-3 p-8 rounded-md outline-none transition-all duration-100"
 		>
@@ -34,7 +34,8 @@
 				</p>
 				<div class=" flex flex-wrap gap-2 mt-2">
 					{#each project.technologies as tech}
-						<img src={tech.src} class="w-10 h-10" alt="tech" />
+						<img src={tech.src} class="w-8 h-8" alt="tech" />
+						<Tooltip placement="bottom" color="indigo">{tech.title}</Tooltip>
 					{/each}
 				</div>
 			</div>

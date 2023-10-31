@@ -16,6 +16,10 @@ export const skillsIcons = writable([
 		src: 'https://cdn2.iconfinder.com/data/icons/designer-skills/128/code-programming-javascript-software-develop-command-language-512.png'
 	},
 	{
+		title: 'TypeScript',
+		src: 'https://imgs.search.brave.com/8oaUgQa7PTVdYv9mxYT0-4dEsF3D548orG3NHRKeYrg/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9yYXcu/Z2l0aHVidXNlcmNv/bnRlbnQuY29tL2dp/bGJhcmJhcmEvbG9n/b3MvbWFpbi9sb2dv/cy90eXBlc2NyaXB0/LWljb24uc3Zn.svg'
+	},
+	{
 		title: 'C-Sharp',
 		src: 'https://1.bp.blogspot.com/-U8C6UaajxeA/XV1J6Yo6x2I/AAAAAAAABQo/3v2OEgTGn9ggUqArXtGZpl_6zqbo09nmACLcBGAs/s1600/csharp_logo.png'
 	},
@@ -36,10 +40,6 @@ export const skillsIcons = writable([
 		src: 'https://imgs.search.brave.com/qlFAtMUjOJ06EBhykDOXGUrmQ4UM2GdOmNiPAzXjS5w/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9sb2dv/cy1kb3dubG9hZC5j/b20vd3AtY29udGVu/dC91cGxvYWRzLzIw/MTYvMDkvUmVhY3Rf/bG9nb19sb2dvdHlw/ZV9lbWJsZW0tNzAw/eDYyNi5wbmc'
 	},
 	{
-		title: 'Angular',
-		src: 'https://imgs.search.brave.com/YlS5VuWzZvKwp2RgiANLb12xGWHVnPPV6Id32uidwng/rs:fit:1200:1200:1/g:ce/aHR0cHM6Ly9jZG4u/ZnJlZWJpZXN1cHBs/eS5jb20vbG9nb3Mv/bGFyZ2UvMngvYW5n/dWxhci1pY29uLTEt/bG9nby1wbmctdHJh/bnNwYXJlbnQucG5n'
-	},
-	{
 		title: 'Next.js',
 		src: 'https://seeklogo.com/images/N/next-js-icon-logo-EE302D5DBD-seeklogo.com.png'
 	},
@@ -58,10 +58,6 @@ export const skillsIcons = writable([
 	{
 		title: 'TailWind CSS',
 		src: 'https://media.zeemly.com/zeemly/product/tailwind-css.png'
-	},
-	{
-		title: 'Sass',
-		src: 'https://vanseodesign.com/blog/wp-content/uploads/2015/09/sass-logo-2.png'
 	},
 	{
 		title: 'MongoDb',
@@ -88,24 +84,6 @@ export const skillsIcons = writable([
 		title: 'Auth.js',
 		src: 'https://authjs.dev/img/logo/logo-sm.webp'
 	},
-
-	{
-		title: 'Github',
-		src: 'https://icon-library.com/images/github-icon-white/github-icon-white-6.jpg'
-	},
-
-	{
-		title: 'Git',
-		src: 'https://3.bp.blogspot.com/-xhNpNJJyQhk/XIe4GY78RQI/AAAAAAAAItc/ouueFUj2Hqo5dntmnKqEaBJR4KQ4Q2K3ACK4BGAYYCw/s1600/logo%2Bgit%2Bicon.png'
-	},
-	{
-		title: 'Postman',
-		src: 'https://blog.scottlogic.com/smangan/assets/postman.png'
-	},
-	{
-		title: 'Figma',
-		src: 'https://cdn.iconscout.com/icon/free/png-512/figma-1693589-1442630.png'
-	},
 	{
 		title: 'FireBase',
 		src: 'https://cdn4.iconfinder.com/data/icons/google-i-o-2016/512/google_firebase-2-512.png'
@@ -114,8 +92,5 @@ export const skillsIcons = writable([
 		title: 'PocketBase',
 		src: 'https://seeklogo.com/images/P/pocketbase-logo-CA73994F09-seeklogo.com.png'
 	},
-	{
-		title: 'Trello',
-		src: 'https://pluspng.com/img-png/trello-png-trello-png-1600.png'
-	}
+
 ]);

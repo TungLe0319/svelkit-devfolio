@@ -1,5 +1,6 @@
 <script>
-	import '../app.css';
+	import ProgressBar from "$lib/components/ProgressBar.svelte";
+import '../app.css';
 	import Navbar from '../lib/components/Navbar.svelte';
 	import Sidebar from '../lib/components/SideBar.svelte';
 	import { fade } from 'svelte/transition';
@@ -15,10 +16,9 @@
 			<slot />
 		</main>
 	{/key}
+	<!-- <ProgressBar/> -->
 </div>
 <Sidebar />
-
-
 
 <style lang="scss">
 	.wrapper {

@@ -2,14 +2,11 @@
 	import EducationSection from '$lib/components/Sections/Education/EducationSection.svelte';
 	import VideoHeroImage from '$lib/components/Sections/Hero/VideoHeroImage.svelte';
 	import Project from '$lib/components/Sections/Portfolio/Project.svelte';
-
-	import MacTerminal from '$lib/components/MacTerminal.svelte';
-	import { writable } from 'svelte/store';
-	import { skillsIcons } from '$lib/stores/skills';
 	import SkillsSection from '$lib/components/Sections/Skills/SkillsSection.svelte';
 	import { projects } from '$lib/stores/projects';
 	import Typewriter from 'svelte-typewriter';
 	import Footer from '$lib/components/Footer.svelte';
+
 </script>
 
 <VideoHeroImage>
@@ -80,6 +77,8 @@
 
 		<Footer />
 	</div>
+
+
 </VideoHeroImage>
 
 <style lang="scss">

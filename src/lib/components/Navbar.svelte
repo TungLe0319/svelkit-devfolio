@@ -50,7 +50,7 @@
 			<NavLi class="text-lg font-3" href="/portfolio">Portfolio</NavLi>
 			<NavLi class="text-lg font-3" href="/contact">Contact</NavLi>
 		</NavUl>
-		<NavHamburger class1="w-full md:flex md:w-auto md:order-1" />
+		<NavHamburger class="w-full md:flex md:w-auto md:order-1" />
 
 		<button
 			on:click={handleChange}

@@ -1,10 +1,15 @@
 <script lang="ts">
 	import { browser } from '$app/environment';
 	import { page } from '$app/stores';
+	import ProgressBar from '$lib/components/ProgressBar.svelte';
 	import { videoPaused, videoSource } from '$lib/stores/landingPage';
 	import { onMount } from 'svelte';
-
-
+let y = 0
+function handleScroll(event) {
+    y = event.target.scrollTop;
+		console.log(y);
+		
+}
 </script>
 
 <div class=" relative flex flex-col justify-center items-center">
@@ -18,8 +23,11 @@
 			autoplay
 			class="object-fit"
 		/>
+
+
 	</div>
-	<div class="absolute w-full h-screen overflow-y-scroll">
+	<div class="absolute w-full h-screen overflow-y-scroll" onscroll="{handleScroll}">
+		<ProgressBar/>
 		<slot />
 	</div>
 </div>
