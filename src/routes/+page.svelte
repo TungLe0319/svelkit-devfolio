@@ -6,7 +6,6 @@
 	import Typewriter from 'svelte-typewriter';
 	import Footer from '$lib/components/Footer.svelte';
 
-import type {ProjectList} from '../lib/models/models'
 
 	export let data;
 	const projects = data.projects 

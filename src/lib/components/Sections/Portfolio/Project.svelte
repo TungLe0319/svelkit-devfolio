@@ -1,21 +1,19 @@
 <script lang="ts">
 	import type { ProjectItem } from '$lib/models/models';
-	import {  Tooltip } from 'flowbite-svelte';
+	import { Tooltip } from 'flowbite-svelte';
 
-	export let project:ProjectItem
+	export let project: ProjectItem;
 </script>
 
 {#if project}
 	<a href={project.link} target="_blank">
-		<div
-			class="  group lg:flex space-x-8 card hover:bg-opacity-100 bg-zinc-950 bg-opacity-50 hover:bg-indigo-500/30 hover:border-indigo-400 hover:border my-3 lg:p-0 rounded-md outline-none transition-all duration-100"
-		>
+		<div class="   card group">
 			<div
-				class=" lg:w-1/3 hover:brightness-75 transition-all duration-150 group-hover:-translate-y-2"
+				class=" img-container"
 			>
 				<img
 					src={project.src}
-					class=" shadow-lg shadow-zinc-800 hover:outline outline-indigo-400 h-auto transition-all duration-150 hover:shadow-xl hover:cursor-pointer rounded"
+					class=" project-img"
 					alt="Project"
 				/>
 				<div class=" flex flex-wrap gap-2 mt-2 p-2">
@@ -38,13 +36,21 @@
 	</a>
 {/if}
 
-<style scoped>
+<style lang="scss" scoped>
 	.card {
-		transition: all 0.25s ease;
+		@apply lg:flex space-x-8  hover:bg-opacity-100 bg-zinc-950 bg-opacity-50 hover:bg-indigo-500/30 hover:border-indigo-400 hover:border my-3 lg:p-0 rounded-md outline-none transition-all duration-100;
 	}
 	.card:hover {
 		transition: all 0.25s ease;
 		backdrop-filter: blur(8px);
+	}
+
+	.img-container{
+		@apply lg:w-1/3 transition-all duration-150 group-hover:-translate-y-2
+	}
+
+	.project-img{
+		@apply  hover:brightness-75  shadow-lg shadow-zinc-800 hover:outline hover:outline-2  outline-white h-auto transition-all duration-300 hover:shadow-xl hover:cursor-pointer rounded
 	}
 
 	.title {
