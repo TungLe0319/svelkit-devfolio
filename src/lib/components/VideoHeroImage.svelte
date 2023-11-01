@@ -34,7 +34,7 @@
 		object-fit: cover !important;
 		width: 100%;
 		height: 100%;
-		filter: brightness(80%);
+		filter: brightness(50%);
 	}
 	.video-container {
 		height: 100vh;
