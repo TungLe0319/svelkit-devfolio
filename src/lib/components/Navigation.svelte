@@ -13,6 +13,7 @@
 	function scrollToSection(sectionId: string) {
 		const section = document.getElementById(sectionId);
 		if (section) {
+			activeSection = sectionId
 			section.scrollIntoView({ behavior: 'smooth' });
 		}
 	}
@@ -22,7 +23,7 @@
 			entries.forEach((entry) => {
 				if (entry.isIntersecting) {
 					activeSection = entry.target.id; // Set the active section
-console.log(activeSection);
+					// console.log(activeSection);
 
 					if (activeSection === 'contact') {
 						$contactIsInView = true;
@@ -42,31 +43,17 @@ console.log(activeSection);
 			}
 		});
 	}
-
-	// Observe the sections and create buttons
-	// $: {
-	// 	sections.forEach((section) => {
-	// 		const sectionId = section.id;
-	// 		const sectionName = section.name;
-	// 		if (browser) {
-	// 			const sectionElement = document.getElementById(sectionId);
-
-	// 			if (sectionElement) {
-	// 				observer.observe(sectionElement);
-	// 			}
-	// 		}
-	// 	});
-	// }
 </script>
 
 <div class="text-center fixed bottom-12 right-0 h-fit w-30 space-y-4">
 	{#each buttonData as item}
 		<button
-			class="button group text-shadow {activeSection === item.id ? 'active' : ''}"
+			class="button group text-shadow {activeSection === item.id ? 'active' : 'opacity-80'}"
 			on:click={() => scrollToSection(item.id)}
 		>
 			<span class="font-1 side-text">{item.name}</span>
 			<span class="side-line {activeSection === item.id ? 'active-line' : ''}" />
+		<span class="absolute -right-5">🥐</span>
 		</button>
 	{/each}
 </div>
@@ -83,7 +70,7 @@ console.log(activeSection);
 	}
 
 	.active {
-		@apply text-indigo-400 -translate-x-4;
+		@apply text-indigo-400 -translate-x-6;
 	}
 	.active-line {
 		@apply bg-indigo-400;

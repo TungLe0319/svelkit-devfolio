@@ -5,7 +5,7 @@
 <div class="p-4 m-4 mt-24 flex justify-center items-center font-1 text-sm text-white text-shadow">
   Designed & Developed by
 <a
-		href="https://www.linkedin.com/in/tung-le0319/"
+		href="https://github.com/TungLe0319/svelkit-devfolio"
 		class="  text-indigo-500 transition-all duration-300 mx-1.5"
     target="_blank"
 		>Tung Le

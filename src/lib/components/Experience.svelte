@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { Timeline, TimelineItem, Button, Badge } from 'flowbite-svelte';
 	import { LinkSolid } from 'flowbite-svelte-icons';
+	import SectionHeader from './SectionHeader.svelte';
 
 	const dataSet = [
 		{
@@ -52,10 +53,14 @@ Proficiently designing and managing databases, with a focus on MySQL.`,
 			]
 		}
 	];
+		const sectionHeader = {
+		title: 'Experience',
+		subtitle: `What I've done`
+	};
 </script>
 
 			<div class=" flex flex-col items-center just-center  w-2/3"  id="experience">
-	<div class=" text-5xl font-1 text-white  mb-24 text-shadow">Experience</div>
+	<SectionHeader {sectionHeader}/>
 	<Timeline classTime="text-white">
 		{#each dataSet as data}
 			<TimelineItem>

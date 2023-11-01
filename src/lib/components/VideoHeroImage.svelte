@@ -2,7 +2,7 @@
 	import { browser } from '$app/environment';
 	import { page } from '$app/stores';
 	import ProgressBar from '$lib/components/ProgressBar.svelte';
-	import { videoPaused, videoSource } from '$lib/stores/landingPage';
+	import { videoPaused, videoSource } from '$lib/stores/Appstate';
 	import { onMount } from 'svelte';
 	let y = 0;
 	function handleScroll(event: any) {

@@ -1,16 +1,33 @@
 <script setup lang="ts">
-	let y: number;
-
+	import { browser } from '$app/environment';
+	import { scrollY } from '$lib/stores/Appstate';
+	// console.log($scrx/llY);
+	let progressBarStyle: string;
 	$: {
-		if (y) {
-			console.log(y);
+		$scrollY;
+		if (browser) {
+
+
+  let windowHeight = window.innerHeight;
+
+  // Add a scroll event listener to update $scrollY
+  window.addEventListener('scroll', () => {
+    $scrollY = window.scrollY;
+    let progress = ($scrollY / (document.body.scrollHeight - windowHeight)) * 100;
+    progressBarStyle = `height: ${progress}%;`;
+  });
+
+
+
 		}
 	}
 </script>
 
-<template />
-
-<svelte:window bind:scrollY={y} />
+<div class=" progress-bar" style={progressBarStyle} />
 
 <style lang="scss">
+	.progress-bar {
+		@apply bg-gradient-to-b  from-indigo-500 via-teal-500  to-orange-500 w-1 fixed;
+		z-index: 999999;
+	}
 </style>

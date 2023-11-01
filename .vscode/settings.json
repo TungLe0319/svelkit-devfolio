@@ -3,4 +3,5 @@
 		"editor.defaultFormatter": "svelte.svelte-vscode"
 	},
 	"nuxt.isNuxtApp": false,
+	"cSpell.words": ["Appstate"]
 }

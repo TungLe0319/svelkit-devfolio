@@ -27,6 +27,10 @@
 	}
 </script>
 
+<svelte:head>
+	<title>Tung Le, Developer Portfolio V2!</title>
+	<meta name="description" content="Explore my Developer Portfolio 2.0, meticulously crafted with SvelteKit and Tailwind CSS. Discover a showcase of my latest projects, skills, and creative endeavors in the world of web development. Dive into a seamless and responsive experience that reflects my passion for technology and innovation." />
+</svelte:head>
 
 <VideoHeroImage>
 	<div class="flex justify-center items-center flex-col relative">
@@ -89,10 +93,6 @@
 </VideoHeroImage>
 
 <div class="bg-zinc-900 w-full flex flex-col items-center justify-center">
-	<!-- <section id="about"></section>
-	<section id="skills"></section>
-	<section id="experience"></section>
-	<section id="projects"></section> -->
 	<AboutMe />
 	<SkillsSection {skills} />
 	<Experience />
