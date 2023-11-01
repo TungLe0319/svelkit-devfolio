@@ -3,7 +3,7 @@
 	import HeroSectionV2 from '$lib/components/VideoHeroImage.svelte';
 	import { onMount } from 'svelte';
 	import { Parallax, ParallaxLayer } from 'svelte-parallax';
-	import Project from '$lib/components/Project.svelte';
+	import Project from '$lib/components/ProjectCard.svelte';
 	import { writable } from 'svelte/store';
 	let parallax: Parallax;
 	let disabled = false;

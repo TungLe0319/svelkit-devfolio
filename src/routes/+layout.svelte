@@ -5,8 +5,12 @@
 	import { fade } from 'svelte/transition';
 	import type { LayoutData } from './$types';
 	import Navigation from '$lib/components/Navigation.svelte';
+	import { scrollY } from '$lib/stores/Appstate';
 
-
+	let y: number;
+	$: {
+		$scrollY = y;
+	}
 	export let data: LayoutData;
 </script>
 
@@ -17,7 +21,7 @@
 		</main>
 	{/key}
 </div>
-
+<svelte:window bind:scrollY={y} />
 <Navigation />
 <Sidebar />
 

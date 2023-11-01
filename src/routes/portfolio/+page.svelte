@@ -3,7 +3,7 @@
 	import { setContext } from 'svelte';
 
 	import { Gallery } from 'flowbite-svelte';
-	import Project from '$lib/components/Project.svelte';
+	import Project from '$lib/components/ProjectCard.svelte';
 	import HeroSectionV2 from '$lib/components/VideoHeroImage.svelte';
 	import { projects } from '$lib/stores/projects';
 

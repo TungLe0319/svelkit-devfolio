@@ -8,15 +8,8 @@
 {#if project}
 	<a href={project.link} target="_blank">
 		<div class="   card group">
-			<div
-				class=" img-container"
-			>
-				<img
-					src={project.src}
-					class=" project-img"
-					alt="Project"
-				/>
-			
+			<div class=" img-container">
+				<img src={project.src} class=" project-img" alt="Project" />
 			</div>
 
 			<div class="lg:w-2/3 text-sm p-4 !m-0 lg:ml-32">
@@ -26,7 +19,7 @@
 				<p class="description text-white">
 					{project.description}
 				</p>
-					<div class=" flex flex-wrap gap-2 p-2">
+				<div class=" flex flex-wrap gap-2 p-2">
 					{#each project.tech as tech}
 						<img src={tech.src} class="w-8 h-8" alt="tech" />
 						<Tooltip placement="bottom" color="indigo">{tech.title}</Tooltip>
@@ -46,12 +39,12 @@
 		backdrop-filter: blur(8px);
 	}
 
-	.img-container{
-		@apply lg:w-1/3 transition-all duration-150 group-hover:-translate-y-2
+	.img-container {
+		@apply lg:w-1/3 transition-all duration-150 group-hover:-translate-y-2;
 	}
 
-	.project-img{
-		@apply  hover:brightness-75  shadow-lg shadow-zinc-800 hover:outline hover:outline-2  outline-white h-auto transition-all duration-300 hover:shadow-xl hover:cursor-pointer rounded
+	.project-img {
+		@apply hover:brightness-75  shadow-lg shadow-zinc-800 hover:outline hover:outline-2  outline-white h-full w-full  transition-all duration-300 hover:shadow-xl hover:cursor-pointer rounded;
 	}
 
 	.title {

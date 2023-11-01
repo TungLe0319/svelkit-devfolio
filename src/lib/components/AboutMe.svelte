@@ -18,7 +18,7 @@
 		</div>
 	</div>
 	<div class="w-1/2 flex items-center justify-center">
-		<img src="src/lib/assets/images/TungPortrait.jpg" alt="" class="w-auto h-96 object-cover" />
+		<img src="src/lib/assets/images/TungPortrait.jpg" alt="" class="w-auto h-96 object-cover rounded shadow-2xl shadow-indigo-500/30" />
 	</div>
 </div>
 

@@ -5,8 +5,9 @@
 	export let skills: TechList;
 </script>
 
-<div class="flex flex-col w-1/2 justify-center items-center mb-24" id="skills">
-	<div class=" text-5xl font-1 text-white mb-24 text-shadow">Skills</div>
+<div class="flex flex-col w-1/2 justify-center items-center h-screen" id="skills">
+	<div class=" text-5xl font-1 text-white  mb-24 text-shadow">Skills</div>
+<div class="font-2  text-white"> 	Some of the technologies I've worked with</div>
 	<div class=" ">
 		<div class="flex flex-wrap gap-1 justify-center items-center">
 			{#each skills as icon, index}

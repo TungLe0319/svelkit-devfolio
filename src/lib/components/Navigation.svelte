@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { browser } from '$app/environment';
-
+	import { contactIsInView } from '$lib/stores/Appstate';
 	const buttonData = [
 		{ name: 'About', id: 'about' },
 		{ name: 'Skills', id: 'skills' },
@@ -8,26 +8,32 @@
 		{ name: 'Projects', id: 'projects' },
 		{ name: 'Contact', id: 'contact' }
 	];
-	const sections = ['about', 'skills', 'experience', 'projects','contact'];
+	const sections = ['about', 'skills', 'experience', 'projects', 'contact'];
 	let activeSection = ''; // Variable to track the active section
-function scrollToSection(sectionId: string) {
-  const section = document.getElementById(sectionId);
-  if (section) {
-    section.scrollIntoView({ behavior: 'smooth' });
-  }
-}
+	function scrollToSection(sectionId: string) {
+		const section = document.getElementById(sectionId);
+		if (section) {
+			section.scrollIntoView({ behavior: 'smooth' });
+		}
+	}
 	if (browser) {
 		// Create an Intersection Observer to determine which section is in view
 		const observer = new IntersectionObserver((entries) => {
 			entries.forEach((entry) => {
 				if (entry.isIntersecting) {
 					activeSection = entry.target.id; // Set the active section
+
+					if (activeSection === 'contact') {
+						$contactIsInView = true;
+					} else {
+						$contactIsInView = false;
+					}
 				}
 			});
 		});
 
 		// Observe the sections
-	
+
 		sections.forEach((sectionId) => {
 			const section = document.getElementById(sectionId);
 			if (section) {
@@ -36,25 +42,20 @@ function scrollToSection(sectionId: string) {
 		});
 	}
 
+	// Observe the sections and create buttons
+	// $: {
+	// 	sections.forEach((section) => {
+	// 		const sectionId = section.id;
+	// 		const sectionName = section.name;
+	// 		if (browser) {
+	// 			const sectionElement = document.getElementById(sectionId);
 
-
-
-    // Observe the sections and create buttons
-    $: {
-      sections.forEach((section) => {
-        const sectionId = section.id;
-        const sectionName = section.name;
-       if (browser) {
-         const sectionElement = document.getElementById(sectionId);
-
-        if (sectionElement) {
-          observer.observe(sectionElement);
-        }
-       }
-      })
-    }
-  
-
+	// 			if (sectionElement) {
+	// 				observer.observe(sectionElement);
+	// 			}
+	// 		}
+	// 	});
+	// }
 </script>
 
 <div class="text-center fixed bottom-12 right-0 h-fit w-30 space-y-4">
