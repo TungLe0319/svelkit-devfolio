@@ -10,7 +10,7 @@
 	};
 </script>
 
-<div class="lg:w-2/3 space-y-5 flex flex-col items-center just-center lg:p-5" id="projects">
+<div class="lg:w-2/3 space-y-5 flex flex-col items-center just-center lg:p-5 my-24" id="projects">
 	<SectionHeader {sectionHeader} />
 
 	{#each projects as project, index (project.title)}

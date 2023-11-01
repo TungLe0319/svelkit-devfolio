@@ -1,6 +1,8 @@
 <script lang="ts">
 	import { browser } from '$app/environment';
 	import { contactIsInView } from '$lib/stores/Appstate';
+	import { SpeedDial, SpeedDialButton } from 'flowbite-svelte';
+	import { ShareNodesSolid, PrintSolid, DownloadSolid, FileCopySolid, GithubSolid, LinkedinSolid, EnvelopeSolid } from 'flowbite-svelte-icons';
 	const buttonData = [
 		{ name: 'About', id: 'about' },
 		{ name: 'Skills', id: 'skills' },
@@ -13,7 +15,7 @@
 	function scrollToSection(sectionId: string) {
 		const section = document.getElementById(sectionId);
 		if (section) {
-			activeSection = sectionId
+			activeSection = sectionId;
 			section.scrollIntoView({ behavior: 'smooth' });
 		}
 	}
@@ -45,7 +47,7 @@
 	}
 </script>
 
-<div class="text-center fixed bottom-12 right-0 h-fit w-30 space-y-4">
+<div class="hidden  lg:block  fixed text-center bottom-12 right-0 h-fit w-30 space-y-4">
 	{#each buttonData as item}
 		<button
 			class="button group text-shadow {activeSection === item.id ? 'active' : 'opacity-80'}"
@@ -53,10 +55,32 @@
 		>
 			<span class="font-1 side-text">{item.name}</span>
 			<span class="side-line {activeSection === item.id ? 'active-line' : ''}" />
-		<span class="absolute -right-5">🥐</span>
+			<span class="absolute -right-5">🥐</span>
 		</button>
 	{/each}
+
+	
 </div>
+<SpeedDial   color="light" defaultClass="fixed bottom-6 right-6   lg:hidden">
+	
+		<SpeedDialButton name="Github" >
+		<a href="https://github.com/TungLe0319" target="_blank">
+				<GithubSolid class="w-10 h-10" />
+		</a>
+		</SpeedDialButton>
+		<SpeedDialButton name="LinkedIn">
+		<a href="https://www.linkedin.com/in/tung-le0319/" target="_blank">
+				<LinkedinSolid class="w-8 h-8" />
+		</a>
+		</SpeedDialButton>
+		<SpeedDialButton name="Github">
+		<a href="mailto:tung.le0319@gmail.com" target="_blank">
+				<EnvelopeSolid class="w-9 h-9" />
+		</a>
+		</SpeedDialButton>
+		
+	
+	</SpeedDial>
 
 <style lang="scss">
 	.button {

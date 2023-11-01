@@ -13,6 +13,7 @@
 	export let data;
 	const projects = data.projects;
 	const skills = data.skillsIcons;
+	const experience = data.experience
 	let x: any = 0;
 	let y: any = 0;
 
@@ -95,7 +96,7 @@
 <div class="bg-zinc-900 w-full flex flex-col items-center justify-center">
 	<AboutMe />
 	<SkillsSection {skills} />
-	<Experience />
+	<Experience {experience} />
 	<Projects {projects} />
 	<Contact />
 	<Footer />

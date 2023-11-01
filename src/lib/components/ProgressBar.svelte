@@ -27,7 +27,7 @@
 
 <style lang="scss">
 	.progress-bar {
-		@apply bg-gradient-to-b  from-indigo-500 via-teal-500  to-orange-500 w-1 fixed;
+		@apply bg-gradient-to-b  from-indigo-500 via-teal-500  to-orange-500 w-0.5 fixed;
 		z-index: 999999;
 	}
 </style>

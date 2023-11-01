@@ -13,7 +13,7 @@
 <div class="contact-container  my-24" id="contact">
 	<SectionHeader {sectionHeader}/>
 
-	<div class=" text-xl text-center font-2 text-white  w-2/3">
+	<div class=" text-sm lg:text-xl text-center font-2 text-white  lg:w-2/3">
 	I'm currently actively seeking new opportunities, so if you have any inquiries or simply want to connect and have a friendly chat, please feel free to reach out. My inbox is always open and I'll do my best to get back to you!
 	</div>
 
@@ -22,8 +22,8 @@
 			transition:fade={{ delay: 250, duration: 300 }}
 			class="flex items-center justify-center my-10 mt-20"
 		>
-			<div class="  space-x-4 group flex justify-center items-center">
-				<a href="https://github.com/TungLe0319" target="_blank">
+			<div class="  space-x-8 group flex justify-center items-center">
+				<a href="mailto:tung.le0319@gmail.com" >
 					<EnvelopeSolid
 						class="w-16 h-16 text-white dark:text-indigo-300 hover:text-indigo-400 dark:hover:text-gray-300 transition-all  duration-300 ease-in-out hover:-translate-y-1 flex justify-center items-center"
 					/>
