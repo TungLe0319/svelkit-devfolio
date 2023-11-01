@@ -58,6 +58,8 @@
 						class="w-0.5 bg-white h-32"
 					/>
 				</div>
+			
+			
 			{/if}
 		</div>
 	</div>
