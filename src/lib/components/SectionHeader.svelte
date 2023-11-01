@@ -1,8 +1,10 @@
 <script lang="ts">
-	import { stringify } from "postcss";
+	interface SectionHeader {
+		title: string;
+		subtitle: string;
+	}
 
-
-  export let sectionHeader
+	export let sectionHeader: SectionHeader;
 </script>
 
 <div class="flex flex-col items-center justify-center mb-20">
@@ -10,6 +12,3 @@
 	<div class="font-2 text-indigo-400">{sectionHeader.subtitle}</div>
 </div>
 
-<style lang="scss">
-
-</style>

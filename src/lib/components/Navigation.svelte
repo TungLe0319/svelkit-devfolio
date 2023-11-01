@@ -2,7 +2,9 @@
 	import { browser } from '$app/environment';
 	import { contactIsInView } from '$lib/stores/Appstate';
 	import { SpeedDial, SpeedDialButton } from 'flowbite-svelte';
-	import { ShareNodesSolid, PrintSolid, DownloadSolid, FileCopySolid, GithubSolid, LinkedinSolid, EnvelopeSolid } from 'flowbite-svelte-icons';
+	import { GithubSolid, LinkedinSolid, EnvelopeSolid } from 'flowbite-svelte-icons';
+	import { onMount } from 'svelte';
+	import { fade, fly } from 'svelte/transition';
 	const buttonData = [
 		{ name: 'About', id: 'about' },
 		{ name: 'Skills', id: 'skills' },
@@ -11,6 +13,13 @@
 		{ name: 'Contact', id: 'contact' }
 	];
 	const sections = ['about', 'skills', 'experience', 'projects', 'contact'];
+
+let visible:boolean = false
+
+onMount(()=>{
+	visible = true
+})
+
 	let activeSection = ''; // Variable to track the active section
 	function scrollToSection(sectionId: string) {
 		const section = document.getElementById(sectionId);
@@ -48,8 +57,10 @@
 </script>
 
 <div class="hidden  lg:block  fixed text-center bottom-12 right-0 h-fit w-30 space-y-4">
-	{#each buttonData as item}
+	{#each buttonData as item,index}
+	{#if visible}
 		<button
+		in:fly={{ x: 200, duration: 300, delay: (300 + 200 * index) }} out:fade={{ delay: 150, duration: 150 }} 
 			class="button group text-shadow {activeSection === item.id ? 'active' : 'opacity-80'}"
 			on:click={() => scrollToSection(item.id)}
 		>
@@ -57,6 +68,7 @@
 			<span class="side-line {activeSection === item.id ? 'active-line' : ''}" />
 			<span class="absolute -right-5">🥐</span>
 		</button>
+		{/if}
 	{/each}
 
 	

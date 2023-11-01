@@ -93,13 +93,13 @@
 		"
 		>
 			<div class=" px-16 flex flex-col space-y-4">
-				{#if projects}
+				<!-- {#if projects}
 					{#each $projects as project, index}
 						<Project {project} />
 					{/each}
 				{:else}
 					<p>loading...</p>
-				{/if}
+				{/if} -->
 			</div>
 			<!-- 
 			<button

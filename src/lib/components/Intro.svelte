@@ -15,12 +15,12 @@
 		</Typewriter>
 		<Typewriter interval={100} delay={2000}>
 			<p class="text-4xl lg:text-8xl font-1 font-extrabold text-indigo-200 text-shadow">
-				ProblemSolving
+				Software
 			</p>
 		</Typewriter>
 		<Typewriter interval={100} delay={3500}>
 			<p class="text-4xl lg:text-8xl font-1 font-extrabold text-indigo-200 text-shadow">
-				Creatively.
+				Developer
 			</p>
 		</Typewriter>
 	</div>
