@@ -1,6 +1,5 @@
 <script lang="ts">
 	import { Timeline, TimelineItem, Button, Badge } from 'flowbite-svelte';
-	import { LinkSolid } from 'flowbite-svelte-icons';
 	import SectionHeader from './SectionHeader.svelte';
 	import type { ExperienceList } from '$lib/models/models';
 

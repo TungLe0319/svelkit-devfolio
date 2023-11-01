@@ -2,7 +2,7 @@
 	import { browser } from '$app/environment';
 	import { onMount } from 'svelte';
 	import { Parallax, ParallaxLayer } from 'svelte-parallax';
-	import Project from '$lib/components/ProjectCard.svelte';
+
 
 	import { videoPaused, videoSource } from '$lib/stores/Appstate';
 	let parallax: Parallax;

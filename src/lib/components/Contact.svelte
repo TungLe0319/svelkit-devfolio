@@ -1,7 +1,7 @@
 <script>
 	import { contactIsInView } from '$lib/stores/Appstate';
 	import { EnvelopeSolid, GithubSolid, LinkedinSolid } from 'flowbite-svelte-icons';
-	import { fade, fly } from 'svelte/transition';
+	import { fly } from 'svelte/transition';
 	import SectionHeader from './SectionHeader.svelte';
 
 	const sectionHeader = {
