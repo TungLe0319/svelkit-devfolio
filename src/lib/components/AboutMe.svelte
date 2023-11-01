@@ -1,9 +1,21 @@
 <script>
+	import { browser } from "$app/environment";
+
+	if (browser && window) {
+		
+	}
+
+	function readFile() {
+		// console.log('sdf');
+if (window && browser ) {
+	     window?.open('TungDeveloperResume.pdf', '_blank') //to open in new tab
+}
+   }
 </script>
 
 <div class="flex justify-center space-x-4 w-2/3 p-4 my-24" id="about">
 	<div class="w-1/2">
-		<div class=" text-5xl font-1 text-white text-shadow">About Me</div>
+		<div class=" text-5xl font-1 text-white text-shadow mb-18">About Me</div>
 
 		<div class="font-2 text-white">
 			Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur voluptatum nostrum aperiam.
@@ -18,9 +30,14 @@
 		</div>
 	</div>
 	<div class="w-1/2 flex items-center justify-center">
-		<img src="src/lib/assets/images/TungPortrait.jpg" alt="" class="w-auto h-96 object-cover rounded shadow-2xl shadow-indigo-500/30" />
+		<img
+			src="TungPortrait.jpg"
+			alt=""
+			class="w-auto h-96 object-cover rounded shadow-2xl shadow-indigo-500/30"
+		/>
 	</div>
 </div>
+<button  class="p-4 bg-indigo-500 rounded-md shadow-xl shadow-indigo-500/40 font-2  text-sm text-white hover:bg-indigo-400 transition-all duration-300" on:click={readFile}>Check Out My Resume</button>
 
 <style lang="scss">
 	.component {
