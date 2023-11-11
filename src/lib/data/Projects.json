@@ -160,7 +160,7 @@
 		"link": "https://next-fire.tung.devopportunities.dev/"
 	},
 	{
-		"title": "Better After Books",
+		"title": "Good Reads",
 		"src": "https://media.discordapp.net/attachments/1060066788878069891/1060067418820579439/BetterAfterBooks.png?width=720&height=390",
 		"description": "Full-stack application tailored to book lovers, allowing them to connect, discover, share recommendations, and curate collections of their favorite books. Inspired by Bookbub.com",
 		"tech": [
@@ -185,7 +185,7 @@
 				"src": "https://1.bp.blogspot.com/-U8C6UaajxeA/XV1J6Yo6x2I/AAAAAAAABQo/3v2OEgTGn9ggUqArXtGZpl_6zqbo09nmACLcBGAs/s1600/csharp_logo.png"
 			}
 		],
-		"link": "https://better-after-books-demo.onrender.com/#/"
+		"link": "https://good-reads.apps.devopportunities.dev/#/"
 	},
 	{
 		"title": "Keepr",
@@ -213,6 +213,6 @@
 				"src": "https://1.bp.blogspot.com/-U8C6UaajxeA/XV1J6Yo6x2I/AAAAAAAABQo/3v2OEgTGn9ggUqArXtGZpl_6zqbo09nmACLcBGAs/s1600/csharp_logo.png"
 			}
 		],
-		"link": "https://keepr-project-demo.onrender.com"
+		"link": "https://keeper.tung.devopportunities.dev/#/"
 	}
 ]
