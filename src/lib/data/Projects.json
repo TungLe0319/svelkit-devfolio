@@ -105,7 +105,7 @@
 				"src": "https://media.zeemly.com/zeemly/product/tailwind-css.png"
 			}
 		],
-		"link": "https://next-fire.tung.devopportunities.dev/"
+		"link": "https://nextcord.apps.devopportunities.dev/"
 	},
 
 	{
@@ -137,7 +137,7 @@
 	{
 		"title": "NextFire",
 		"src": "https://cdn.discordapp.com/attachments/1060066788878069891/1063581265971904593/Screenshot_2023-01-13_at_3.11.41_PM.png?ex=654eaabe&is=653c35be&hm=ba3d4cff1a6f382ec74bcaec7d7f236a1534228cf1f3b9efa4ab53a8fc9f1e1e&",
-		"description": "Full-Stack app and landing page custom made for a yoga business owner and friend to showcase her class teaching schedules and upcoming events.",
+		"description": "Full-stack social blogging platform built with React, Firebase, Tailwind, and Next.js. Inspired by website Dev.to, course taught by Fireship.io",
 		"tech": [
 			{
 				"title": "React",

@@ -11,6 +11,16 @@ export interface TechItem {
 	src: string;
 }
 
+export interface ExperienceItem {
+	date: string;
+	title: string;
+	description: string;
+	link: string;
+	tech: string[];
+}
+
 export type ProjectList = ProjectItem[];
 
-export type TechList = TechItem[]
+export type TechList = TechItem[];
+
+export type ExperienceList = ExperienceItem[]

@@ -1,6 +1,10 @@
 <script lang="ts">
 	import { browser } from '$app/environment';
 	import { contactIsInView } from '$lib/stores/Appstate';
+	import { SpeedDial, SpeedDialButton } from 'flowbite-svelte';
+	import { GithubSolid, LinkedinSolid, EnvelopeSolid } from 'flowbite-svelte-icons';
+	import { onMount } from 'svelte';
+	import { fade, fly } from 'svelte/transition';
 	const buttonData = [
 		{ name: 'About', id: 'about' },
 		{ name: 'Skills', id: 'skills' },
@@ -9,10 +13,18 @@
 		{ name: 'Contact', id: 'contact' }
 	];
 	const sections = ['about', 'skills', 'experience', 'projects', 'contact'];
+
+let visible:boolean = false
+
+onMount(()=>{
+	visible = true
+})
+
 	let activeSection = ''; // Variable to track the active section
 	function scrollToSection(sectionId: string) {
 		const section = document.getElementById(sectionId);
 		if (section) {
+			activeSection = sectionId;
 			section.scrollIntoView({ behavior: 'smooth' });
 		}
 	}
@@ -22,7 +34,7 @@
 			entries.forEach((entry) => {
 				if (entry.isIntersecting) {
 					activeSection = entry.target.id; // Set the active section
-console.log(activeSection);
+					// console.log(activeSection);
 
 					if (activeSection === 'contact') {
 						$contactIsInView = true;
@@ -42,34 +54,45 @@ console.log(activeSection);
 			}
 		});
 	}
-
-	// Observe the sections and create buttons
-	// $: {
-	// 	sections.forEach((section) => {
-	// 		const sectionId = section.id;
-	// 		const sectionName = section.name;
-	// 		if (browser) {
-	// 			const sectionElement = document.getElementById(sectionId);
-
-	// 			if (sectionElement) {
-	// 				observer.observe(sectionElement);
-	// 			}
-	// 		}
-	// 	});
-	// }
 </script>
 
-<div class="text-center fixed bottom-12 right-0 h-fit w-30 space-y-4">
-	{#each buttonData as item}
+<div class="hidden  lg:block  fixed text-center bottom-12 right-0 h-fit w-30 space-y-4">
+	{#each buttonData as item,index}
+	{#if visible}
 		<button
-			class="button group text-shadow {activeSection === item.id ? 'active' : ''}"
+		in:fly={{ x: 200, duration: 300, delay: (300 + 200 * index) }} out:fade={{ delay: 150, duration: 150 }} 
+			class="button group text-shadow {activeSection === item.id ? 'active' : 'opacity-80'}"
 			on:click={() => scrollToSection(item.id)}
 		>
 			<span class="font-1 side-text">{item.name}</span>
 			<span class="side-line {activeSection === item.id ? 'active-line' : ''}" />
+			<span class="absolute -right-5">🥐</span>
 		</button>
+		{/if}
 	{/each}
+
+	
 </div>
+<SpeedDial   color="light" defaultClass="fixed bottom-6 right-6   lg:hidden">
+	
+		<SpeedDialButton name="Github" >
+		<a href="https://github.com/TungLe0319" target="_blank">
+				<GithubSolid class="w-10 h-10" />
+		</a>
+		</SpeedDialButton>
+		<SpeedDialButton name="LinkedIn">
+		<a href="https://www.linkedin.com/in/tung-le0319/" target="_blank">
+				<LinkedinSolid class="w-8 h-8" />
+		</a>
+		</SpeedDialButton>
+		<SpeedDialButton name="Github">
+		<a href="mailto:tung.le0319@gmail.com" target="_blank">
+				<EnvelopeSolid class="w-9 h-9" />
+		</a>
+		</SpeedDialButton>
+		
+	
+	</SpeedDial>
 
 <style lang="scss">
 	.button {
@@ -83,7 +106,7 @@ console.log(activeSection);
 	}
 
 	.active {
-		@apply text-indigo-400 -translate-x-4;
+		@apply text-indigo-400 -translate-x-6;
 	}
 	.active-line {
 		@apply bg-indigo-400;

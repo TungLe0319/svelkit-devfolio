@@ -1,15 +1,13 @@
 <script lang="ts">
 	import { browser } from '$app/environment';
-	import HeroSectionV2 from '$lib/components/VideoHeroImage.svelte';
 	import { onMount } from 'svelte';
 	import { Parallax, ParallaxLayer } from 'svelte-parallax';
-	import Project from '$lib/components/ProjectCard.svelte';
-	import { writable } from 'svelte/store';
-	import { videoPaused, videoSource } from '$lib/stores/landingPage';
+
+
+	import { videoPaused, videoSource } from '$lib/stores/Appstate';
 	let parallax: Parallax;
 	let disabled = false;
 	let fancy = 'Projects'.split('');
-	import { projects } from '$lib/stores/projects';
 	import Typewriter from 'svelte-typewriter';
 	onMount(() => {
 		// parallax.scrollTo(3, { selector: '.bottom-btn', duration: 5000 });
@@ -95,13 +93,13 @@
 		"
 		>
 			<div class=" px-16 flex flex-col space-y-4">
-				{#if projects}
+				<!-- {#if projects}
 					{#each $projects as project, index}
 						<Project {project} />
 					{/each}
 				{:else}
 					<p>loading...</p>
-				{/if}
+				{/if} -->
 			</div>
 			<!-- 
 			<button

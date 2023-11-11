@@ -1,14 +1,11 @@
 <script lang="ts">
-	import { browser } from '$app/environment';
-	import HeroSectionV2 from '$lib/components/VideoHeroImage.svelte';
+	import { browser } from '$app/environment'
 	import { onMount } from 'svelte';
 	import { Parallax, ParallaxLayer } from 'svelte-parallax';
 	import Project from '$lib/components/ProjectCard.svelte';
-	import { writable } from 'svelte/store';
 	let parallax: Parallax;
 	let disabled = false;
 	let fancy = 'Projects'.split('');
-	import { projects } from '$lib/stores/projects';
 	onMount(() => {
 		// parallax.scrollTo(3, { selector: '.bottom-btn', duration: 5000 });
 	});
@@ -70,21 +67,21 @@
 		</ParallaxLayer> -->
 
 		<ParallaxLayer
-			offset="2"
-			rate="2"
+			offset={2}
+			rate={2}
 			class="flex justify-center items-center"
 			style="
 
 		"
 		>
 			<div class=" px-16  flex flex-col space-y-4">
-				{#if projects}
+				<!-- {#if projects}
 					{#each $projects as project, index}
 						<Project {project} />
 					{/each}
 				{:else}
 					<p>loading...</p>
-				{/if}
+				{/if} -->
 			</div>
 <!-- 
 			<button

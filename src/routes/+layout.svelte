@@ -6,20 +6,28 @@
 	import type { LayoutData } from './$types';
 	import Navigation from '$lib/components/Navigation.svelte';
 	import { scrollY } from '$lib/stores/Appstate';
+	import ProgressBar from '$lib/components/ProgressBar.svelte';
 
-	let y: number;
+	export let y: number;
 	$: {
-		$scrollY = y;
+		if (y) {
+			$scrollY = y;
+		}
 	}
 	export let data: LayoutData;
 </script>
 
 <div class="wrapper">
 	{#key data?.pathname}
-		<main class="w-full" in:fade={{ duration: 300, delay: 100 }} out:fade={{ duration: 200 }}>
+		<main
+			class="w-full relative"
+			in:fade={{ duration: 300, delay: 100 }}
+			out:fade={{ duration: 200 }}
+		>
 			<slot />
 		</main>
 	{/key}
+	<ProgressBar />
 </div>
 <svelte:window bind:scrollY={y} />
 <Navigation />

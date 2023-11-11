@@ -1,12 +1,13 @@
 <script lang="ts">
 	import type { ProjectItem } from '$lib/models/models';
 	import { Tooltip } from 'flowbite-svelte';
+	import { ArrowRightOutline } from 'flowbite-svelte-icons';
 
 	export let project: ProjectItem;
 </script>
 
 {#if project}
-	<a href={project.link} target="_blank">
+	<a href={project.link} target="_blank" class="px-10 lg:px-0">
 		<div class="   card group">
 			<div class=" img-container">
 				<img src={project.src} class=" project-img" alt="Project" />
@@ -15,8 +16,9 @@
 			<div class="lg:w-2/3 text-sm p-4 !m-0 lg:ml-32">
 				<div class="flex items-center space-x-3 mb-4">
 					<p class="text-lg font-1 title text-white">{project.title}</p>
+					<ArrowRightOutline class="text-white opacity-70 group-hover:text-indigo-400 transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-3 "/>
 				</div>
-				<p class="description text-white">
+				<p class="description text-white text-xs lg:text-base">
 					{project.description}
 				</p>
 				<div class=" flex flex-wrap gap-2 p-2">
@@ -32,7 +34,7 @@
 
 <style lang="scss" scoped>
 	.card {
-		@apply lg:flex space-x-8  hover:bg-opacity-100 bg-zinc-950 bg-opacity-50 hover:bg-indigo-500/30 hover:border-indigo-400 hover:border my-3 lg:p-0 rounded-md outline-none transition-all duration-100;
+		@apply lg:flex space-x-8 hover:bg-opacity-100 bg-zinc-950 bg-opacity-50 hover:bg-indigo-900/10 hover:border-indigo-500 hover:border my-3 lg:p-0 rounded-md outline-none transition-all duration-100;
 	}
 	.card:hover {
 		transition: all 0.25s ease;
@@ -44,13 +46,16 @@
 	}
 
 	.project-img {
-		@apply hover:brightness-75  shadow-lg shadow-zinc-800 hover:outline hover:outline-2  outline-white h-full w-full  transition-all duration-300 hover:shadow-xl hover:cursor-pointer rounded;
+		@apply hover:brightness-75  shadow-lg shadow-zinc-800 hover:outline hover:outline-2  outline-white h-full w-full  transition-all duration-300 hover:shadow-xl hover:cursor-pointer rounded rounded-b-none lg:rounded-b-md;
 	}
 
 	.title {
-		@apply transition-all duration-300;
+		@apply transition-all duration-300 text-indigo-400 lg:text-white;
 	}
 	.card:hover .title {
 		@apply transition-all  duration-300 text-indigo-400;
+	}
+	.card:hover .link-icon{
+			@apply transition-all  duration-300 text-indigo-600;
 	}
 </style>
