@@ -23,7 +23,7 @@
 				</p>
 				<div class=" flex flex-wrap gap-2 p-2">
 					{#each project.tech as tech}
-						<img src={tech.src} class="w-8 h-8" alt="tech" />
+						<img src={tech.src} class="w-8 h-8 rounded-md" alt="tech" />
 						<Tooltip placement="bottom" color="indigo">{tech.title}</Tooltip>
 					{/each}
 				</div>
@@ -46,7 +46,7 @@
 	}
 
 	.project-img {
-		@apply hover:brightness-75  shadow-lg shadow-zinc-800 hover:outline hover:outline-2  outline-white h-full w-full  transition-all duration-300 hover:shadow-xl hover:cursor-pointer rounded rounded-b-none lg:rounded-b-md;
+		@apply hover:brightness-75  object-cover shadow-lg shadow-zinc-800 hover:outline hover:outline-2  outline-white h-full w-full  transition-all duration-300 hover:shadow-xl hover:cursor-pointer rounded rounded-b-none lg:rounded-b-md;
 	}
 
 	.title {

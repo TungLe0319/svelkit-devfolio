@@ -108,4 +108,19 @@
 		/* keeps the image fixed while scrolling , neat effect. */
 		background-attachment: fixed;
 	}
+
+
+
+	.video-container::before {
+  @apply  bg-gradient-to-b from-transparent to-zinc-900;
+  content: "";
+  position: absolute;
+  bottom: 0;
+  z-index: 1;
+  left: 0;
+  width: 100%;
+	
+  height: 400px; /* adjust height as per your need */
+
+}
 </style>

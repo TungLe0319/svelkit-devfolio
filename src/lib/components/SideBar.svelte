@@ -15,7 +15,8 @@
 	<div
 		in:fly={{ x: -200, duration: 300, delay: 300 + 150 }}
 		out:fly={{ x: -200, duration: 300, delay: 300 + 150 }}
-		class="hidden text-center lg:block fixed bottom-0 left-0 transition-all duration-500"
+
+		class="hidden text-center z-50 lg:block fixed bottom-0 left-0 transition-all duration-500"
 	>
 		<div class="flex flex-col items-start ml-4">
 			{#if !$contactIsInView}

@@ -1,5 +1,34 @@
 [
 	{
+		"title": "Nuxt Drizzle",
+		"src": "https://media.discordapp.net/attachments/1060066788878069891/1172792077554302997/Screenshot_2023-11-10_at_11.56.23_PM.png?ex=65619abc&is=654f25bc&hm=afdffc319647abdf936c33fae33d0dde21e1d1089bc21aff20a87090e3f7a43e&=&width=720&height=400",
+		"description": "Application built in Tauri to create a NoteTaker for customer service and remote calls, has Templates for common situations, changeable Color themes, Clipboard watch for specified details like phone and email",
+		"tech": [
+			{
+				"title": "Nuxt.js",
+				"src": "https://imgs.search.brave.com/ac3WGz-DgM03071K34NEHSDn6LTb8cM2YIrFfa7YAcM/rs:fit:860:0:0/g:ce/aHR0cHM6Ly91cGxv/YWQud2lraW1lZGlh/Lm9yZy93aWtpcGVk/aWEvY29tbW9ucy9h/L2FlL051eHRfbG9n/by5zdmc.svg"
+			},
+
+			{
+				"title": "Auth.js",
+				"src": "https://authjs.dev/img/logo/logo-sm.webp"
+			},
+			{
+				"title": "TailWind CSS",
+				"src": "https://media.zeemly.com/zeemly/product/tailwind-css.png"
+			},
+			{
+				"title": "PostgreSQL",
+				"src": "https://cdn.freebiesupply.com/logos/thumbs/2x/postgresql-logo.png"
+			},
+			{
+				"title": "Drizzle ORM",
+				"src": "https://images.opencollective.com/drizzle-orm/9405e48/logo/256.png?height=256"
+			}
+		],
+		"link": "https://svelte-blog.tung.devopportunities.dev/"
+	},
+	{
 		"title": "Tauri Note Taker",
 		"src": "https://cdn.discordapp.com/attachments/262286883000811520/1168759358155411456/tauri-notetaker.png?ex=6552eef9&is=654079f9&hm=b6f44757ecc51d7ed3e824f24582c8f01f44dc1fd3e75727a867794aa3484831&",
 		"description": "Application built in Tauri to create a NoteTaker for customer service and remote calls, has Templates for common situations, changeable Color themes, Clipboard watch for specified details like phone and email",

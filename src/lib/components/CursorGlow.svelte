@@ -6,7 +6,7 @@
 
 </script>
 
-<div class=" cursor " style="transform: translate({x}, {y});" />
+<div class=" cursor opacity-50 " style="transform: translate({x}, {y});" />
 
 
 
@@ -29,7 +29,7 @@
 		transform: translate(-50%, -50%);
 		transition: all 0.1s ease;
 		z-index: 9999;
-		filter: blur(200px); /* Add a blur effect to create blurred edges */
+		filter: blur(100px); /* Add a blur effect to create blurred edges */
 		box-shadow: 0 0 50px rgba(255, 255, 255, 0.5),
 			/* Add a white glow */ 0 0 30px rgba(255, 165, 0, 0.7),
 			/* Add an orange shadow */ 0 0 30px rgba(255, 69, 0, 0.7),

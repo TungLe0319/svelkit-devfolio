@@ -10,14 +10,14 @@
 	};
 </script>
 
-<div class="flex flex-col lg:w-1/2 justify-center items-center h-screen my-24" id="skills">
+<div class="flex flex-col lg:w-2/3 justify-center items-center h-screen my-24" id="skills">
 <SectionHeader {sectionHeader} />
 	<div class=" ">
-		<div class="flex flex-wrap gap-1 justify-center items-center">
-			{#each skills as icon, index}
+		<div class="flex flex-wrap gap-6 justify-center items-center">
+			{#each skills as icon (icon.title)}
 				<div class="hover:bg-indigo-500/60 transition-all duration-300 p-2 rounded-full">
-					<img src={icon.src} class="lg:w-24 lg:h-24 h-16 w-16 " alt="Icon"  />
-					<Tooltip color="indigo">
+					<img src={icon.src} class="lg:w-24 lg:h-24 h-16 w-16  rounded-md" alt="Icon"  />
+					<Tooltip color="indigo" class="absolute">
 						<p>{icon.title}</p>
 					</Tooltip>
 				</div>

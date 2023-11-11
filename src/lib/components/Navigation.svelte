@@ -56,7 +56,7 @@ onMount(()=>{
 	}
 </script>
 
-<div class="hidden  lg:block  fixed text-center bottom-12 right-0 h-fit w-30 space-y-4">
+<div class="hidden z-50  lg:block  fixed text-center bottom-12 right-0 h-fit w-30 space-y-4">
 	{#each buttonData as item,index}
 	{#if visible}
 		<button
