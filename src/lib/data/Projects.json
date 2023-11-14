@@ -2,7 +2,7 @@
 	{
 		"title": "Nuxt Drizzle",
 		"src": "https://media.discordapp.net/attachments/1060066788878069891/1172792077554302997/Screenshot_2023-11-10_at_11.56.23_PM.png?ex=65619abc&is=654f25bc&hm=afdffc319647abdf936c33fae33d0dde21e1d1089bc21aff20a87090e3f7a43e&=&width=720&height=400",
-		"description": "Template project built on the Nuxt framework, showcasing the power of Drizzle ORM for efficient data management. The template employs Tailwind CSS for responsive and sleek design. Enhanced with the refined components of Daisy UI, it offers an aesthetically pleasing and functional interface. This project brings together the strengths of Nuxt, Drizzle ORM, Tailwind CSS, and Daisy UI to deliver a modern, efficient, and visually appealing web solution.",
+		"description": "Template project built on the Nuxt framework, showcasing the power of Drizzle ORM for efficient data management. The template employs Tailwind CSS for responsive and sleek design. Enhanced with the refined components of Daisy UI. This project brings together the strengths of Nuxt, Drizzle ORM, Tailwind CSS, and Daisy UI.",
 		"tech": [
 			{
 				"title": "Nuxt.js",
