@@ -13,7 +13,7 @@
 </script>
 
 {#if browser}
-	<Parallax sections={3} bind:this={parallax} {disabled} class="bg-zinc-800">
+	<Parallax sections={8} bind:this={parallax} {disabled} class="bg-zinc-800">
 		{#each fancy as char, index (index)}
 			<ParallaxLayer
 				rate={(index + 1) / (fancy.length - 1)}
@@ -45,27 +45,7 @@
 				class="bg-gradient-to-l from-indigo-500"
 			/>
 		</ParallaxLayer>
-		<!-- 
-		<ParallaxLayer
-			rate="1"
-			class=""
-			style="
 	
-			display: flex; 
-			justify-content: center; 
-			align-items: center; 
-			flex-direction: column;
-		"
-		>
-			<h1>Svelte Parallax</h1>
-			<button
-				class="bottom-btn"
-				on:click={() => parallax.scrollTo(3, { selector: '.top-btn', duration: 4000 })}
-			>
-				Click me!
-			</button>
-		</ParallaxLayer> -->
-
 		<ParallaxLayer
 			offset={2}
 			rate={2}
@@ -83,13 +63,30 @@
 					<p>loading...</p>
 				{/if} -->
 			</div>
-<!-- 
-			<button
-				class="top-btn"
-				on:click={() => parallax.scrollTo(1, { selector: '.bottom-btn', duration: 1000 })}
-			>
-				Scroll to top
-			</button> -->
+
+		</ParallaxLayer>
+
+		<!-- Add 5 more sections with unique styling -->
+		<ParallaxLayer offset={3} rate={1} style="background-color: #ff0000;">
+			<!-- Section content for 'Projects' -->
+
+			Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium placeat sed commodi, optio, labore nihil exercitationem quod ratione adipisci aut velit aspernatur pariatur culpa voluptatibus possimus. Minus placeat expedita tenetur, distinctio obcaecati provident suscipit voluptatum. Sapiente consequatur reiciendis atque dolores eos explicabo nesciunt consectetur voluptatum provident nihil est sequi illum dicta libero adipisci quidem omnis numquam debitis eaque, iste voluptatem mollitia consequuntur labore at? Blanditiis fugiat optio ipsa doloribus, voluptatum nihil eveniet architecto et, sapiente aperiam corporis quidem sit! Consectetur iusto ut voluptates suscipit velit exercitationem repudiandae laudantium ex obcaecati maxime? Iusto amet itaque sequi non debitis quidem consectetur nobis tempora perferendis! Cumque delectus non tenetur. Reprehenderit nostrum quia temporibus voluptate incidunt. Mollitia modi ad impedit excepturi asperiores voluptas inventore, velit, molestias ipsa eaque culpa quisquam dolor aliquam molestiae? Veniam, nobis? Earum adipisci obcaecati ex sunt, voluptatum corrupti quia. Atque voluptatibus ea iste inventore blanditiis est harum unde qui, quam dolorum modi tenetur aperiam soluta quas laborum voluptatem magnam vitae repellat exercitationem. Eaque, magni libero ex placeat, cumque sunt esse neque minima velit consectetur reiciendis id! In quidem molestias, a libero praesentium et modi est quisquam sapiente, veritatis necessitatibus. Natus doloribus rem nulla tenetur aspernatur? Inventore debitis quae voluptatem facilis!
+		</ParallaxLayer>
+
+		<ParallaxLayer offset={4} rate={1} style="background-color: #00ff00;">
+			<!-- Section content for 'Contact' -->		Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium placeat sed commodi, optio, labore nihil exercitationem quod ratione adipisci aut velit aspernatur pariatur culpa voluptatibus possimus. Minus placeat expedita tenetur, distinctio obcaecati provident suscipit voluptatum. Sapiente consequatur reiciendis atque dolores eos explicabo nesciunt consectetur voluptatum provident nihil est sequi illum dicta libero adipisci quidem omnis numquam debitis eaque, iste voluptatem mollitia consequuntur labore at? Blanditiis fugiat optio ipsa doloribus, voluptatum nihil eveniet architecto et, sapiente aperiam corporis quidem sit! Consectetur iusto ut voluptates suscipit velit exercitationem repudiandae laudantium ex obcaecati maxime? Iusto amet itaque sequi non debitis quidem consectetur nobis tempora perferendis! Cumque delectus non tenetur. Reprehenderit nostrum quia temporibus voluptate incidunt. Mollitia modi ad impedit excepturi asperiores voluptas inventore, velit, molestias ipsa eaque culpa quisquam dolor aliquam molestiae? Veniam, nobis? Earum adipisci obcaecati ex sunt, voluptatum corrupti quia. Atque voluptatibus ea iste inventore blanditiis est harum unde qui, quam dolorum modi tenetur aperiam soluta quas laborum voluptatem magnam vitae repellat exercitationem. Eaque, magni libero ex placeat, cumque sunt esse neque minima velit consectetur reiciendis id! In quidem molestias, a libero praesentium et modi est quisquam sapiente, veritatis necessitatibus. Natus doloribus rem nulla tenetur aspernatur? Inventore debitis quae voluptatem facilis!
+		</ParallaxLayer>
+
+		<ParallaxLayer offset={5} rate={1} style="background-color: #0000ff;">
+			<!-- Section content for 'About Me' -->		Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium placeat sed commodi, optio, labore nihil exercitationem quod ratione adipisci aut velit aspernatur pariatur culpa voluptatibus possimus. Minus placeat expedita tenetur, distinctio obcaecati provident suscipit voluptatum. Sapiente consequatur reiciendis atque dolores eos explicabo nesciunt consectetur voluptatum provident nihil est sequi illum dicta libero adipisci quidem omnis numquam debitis eaque, iste voluptatem mollitia consequuntur labore at? Blanditiis fugiat optio ipsa doloribus, voluptatum nihil eveniet architecto et, sapiente aperiam corporis quidem sit! Consectetur iusto ut voluptates suscipit velit exercitationem repudiandae laudantium ex obcaecati maxime? Iusto amet itaque sequi non debitis quidem consectetur nobis tempora perferendis! Cumque delectus non tenetur. Reprehenderit nostrum quia temporibus voluptate incidunt. Mollitia modi ad impedit excepturi asperiores voluptas inventore, velit, molestias ipsa eaque culpa quisquam dolor aliquam molestiae? Veniam, nobis? Earum adipisci obcaecati ex sunt, voluptatum corrupti quia. Atque voluptatibus ea iste inventore blanditiis est harum unde qui, quam dolorum modi tenetur aperiam soluta quas laborum voluptatem magnam vitae repellat exercitationem. Eaque, magni libero ex placeat, cumque sunt esse neque minima velit consectetur reiciendis id! In quidem molestias, a libero praesentium et modi est quisquam sapiente, veritatis necessitatibus. Natus doloribus rem nulla tenetur aspernatur? Inventore debitis quae voluptatem facilis!
+		</ParallaxLayer>
+
+		<ParallaxLayer offset={6} rate={1} style="background-color: #ffff00;">
+			<!-- Section content for 'GitHub Repo' -->
+		</ParallaxLayer>
+
+		<ParallaxLayer offset={7} rate={1} style="background-color: #ff00ff;">
+			<!-- Section content for the fifth section -->
 		</ParallaxLayer>
 
 	</Parallax>
