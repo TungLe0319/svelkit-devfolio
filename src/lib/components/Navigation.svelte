@@ -36,11 +36,7 @@ onMount(()=>{
 					activeSection = entry.target.id; // Set the active section
 					// console.log(activeSection);
 
-					if (activeSection === 'contact') {
-						$contactIsInView = true;
-					} else {
-						$contactIsInView = false;
-					}
+			
 				}
 			});
 		});

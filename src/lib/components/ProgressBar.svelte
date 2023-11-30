@@ -1,26 +1,37 @@
 <script setup lang="ts">
 	import { browser } from '$app/environment';
-	import { scrollY } from '$lib/stores/Appstate';
+	import { contactIsInView, scrollY } from '$lib/stores/Appstate';
 	// console.log($scrx/llY);
 	let progressBarStyle: string;
 	$: {
 		$scrollY;
 		if (browser) {
+			let windowHeight = window.innerHeight;
 
-
-  let windowHeight = window.innerHeight;
-
-  // Add a scroll event listener to update $scrollY
-  window.addEventListener('scroll', () => {
-    $scrollY = window.scrollY;
-    let progress = ($scrollY / (document.body.scrollHeight - windowHeight)) * 100;
-    progressBarStyle = `height: ${progress}%;`;
-  });
-
-
-
+			// Add a scroll event listener to update $scrollY
+			window.addEventListener('scroll', () => {
+				$scrollY = window.scrollY;
+				let progress = ($scrollY / (document.body.scrollHeight - windowHeight)) * 100;
+				progressBarStyle = `height: ${progress}%;`;
+			});
 		}
 	}
+
+	$:{
+	
+		
+		if ($scrollY >= 8200) {
+			
+						$contactIsInView = true;
+					} else {
+						$contactIsInView = false;
+					}
+		}
+	
+	
+
+
+
 </script>
 
 <div class=" progress-bar" style={progressBarStyle} />

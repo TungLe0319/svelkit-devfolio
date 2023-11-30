@@ -42,3 +42,11 @@
 
 </div>
 
+
+
+<style lang="css">
+
+	a{
+		@apply hover:-translate-y-1 transition-transform 
+	}
+</style>

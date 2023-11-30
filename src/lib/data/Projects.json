@@ -1,5 +1,65 @@
 [
 	{
+		"title": "UIUX-Hvac",
+		"src": "https://media.discordapp.net/attachments/1060066788878069891/1179920738472443967/image.png?ex=657b89d1&is=656914d1&hm=f3ae349883216f47f2cc3ecd94163939d884110a58607aff89f7fbe97b0ed165&=&format=webp&width=960&height=533",
+		"description": "A part of my  comprehensive developer portfolio series, meticulously crafted with Nuxt, Vue, and Tailwind. This collection showcases my proficiency in creating dynamic and visually appealing UI/UX landing pages.This one particular focused on HVAC services.",
+		"tech": [
+			{
+				"title": "Nuxt.js",
+				"src": "https://imgs.search.brave.com/ac3WGz-DgM03071K34NEHSDn6LTb8cM2YIrFfa7YAcM/rs:fit:860:0:0/g:ce/aHR0cHM6Ly91cGxv/YWQud2lraW1lZGlh/Lm9yZy93aWtpcGVk/aWEvY29tbW9ucy9h/L2FlL051eHRfbG9n/by5zdmc.svg"
+			},
+			{
+				"title": "Vue.js 3",
+				"src": "https://imgs.search.brave.com/Hsy3vsixUOO8EgH22as2LpgNP6zF5hEx6P-pDoc0n0c/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9kMzN3/dWJyZmtpMGw2OC5j/bG91ZGZyb250Lm5l/dC83MThjNmU0ODk1/NjI0OTEyMWNmM2Nj/YTFhMjJhOTlmODM3/MmEzZjBkLzVmNjg5/L19udXh0L2ltZy9j/MmE2MDVmLnBuZw"
+			},
+			{
+				"title": "TailWind CSS",
+				"src": "https://media.zeemly.com/zeemly/product/tailwind-css.png"
+			}
+		],
+		"link": "https://frontier.devopportunities.dev/"
+	},
+	{
+		"title": "UIUX-Digital-2",
+		"src": "https://media.discordapp.net/attachments/1060066788878069891/1179921199812321401/image.png?ex=657b8a3f&is=6569153f&hm=3541c46bbf391308ccc3181a60e542ce628efc95cbedadfa8051034d0b43c80a&=&format=webp&width=960&height=533",
+		"description": "A part of my  comprehensive developer portfolio series, meticulously crafted with Nuxt, Vue, and Tailwind. This collection showcases my proficiency in creating dynamic and visually appealing UI/UX landing pages.",
+		"tech": [
+			{
+				"title": "Nuxt.js",
+				"src": "https://imgs.search.brave.com/ac3WGz-DgM03071K34NEHSDn6LTb8cM2YIrFfa7YAcM/rs:fit:860:0:0/g:ce/aHR0cHM6Ly91cGxv/YWQud2lraW1lZGlh/Lm9yZy93aWtpcGVk/aWEvY29tbW9ucy9h/L2FlL051eHRfbG9n/by5zdmc.svg"
+			},
+			{
+				"title": "Vue.js 3",
+				"src": "https://imgs.search.brave.com/Hsy3vsixUOO8EgH22as2LpgNP6zF5hEx6P-pDoc0n0c/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9kMzN3/dWJyZmtpMGw2OC5j/bG91ZGZyb250Lm5l/dC83MThjNmU0ODk1/NjI0OTEyMWNmM2Nj/YTFhMjJhOTlmODM3/MmEzZjBkLzVmNjg5/L19udXh0L2ltZy9j/MmE2MDVmLnBuZw"
+			},
+			{
+				"title": "TailWind CSS",
+				"src": "https://media.zeemly.com/zeemly/product/tailwind-css.png"
+			}
+		],
+		"link": "https://tung.uiux.digital-2.devopportunities.dev/"
+	},
+	{
+		"title": "UIUX-Digital-1",
+		"src": "https://media.discordapp.net/attachments/1060066788878069891/1179921120556757092/image.png?ex=657b8a2d&is=6569152d&hm=c7ae472bcb30e33b7c7faed738922aa0cfc1b45e48d24b65618fba9f37329765&=&format=webp&width=960&height=533",
+		"description": "A part of my  comprehensive developer portfolio series, meticulously crafted with Nuxt, Vue, and Tailwind. This collection showcases my proficiency in creating dynamic and visually appealing UI/UX landing pages.",
+		"tech": [
+			{
+				"title": "Nuxt.js",
+				"src": "https://imgs.search.brave.com/ac3WGz-DgM03071K34NEHSDn6LTb8cM2YIrFfa7YAcM/rs:fit:860:0:0/g:ce/aHR0cHM6Ly91cGxv/YWQud2lraW1lZGlh/Lm9yZy93aWtpcGVk/aWEvY29tbW9ucy9h/L2FlL051eHRfbG9n/by5zdmc.svg"
+			},
+			{
+				"title": "Vue.js 3",
+				"src": "https://imgs.search.brave.com/Hsy3vsixUOO8EgH22as2LpgNP6zF5hEx6P-pDoc0n0c/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9kMzN3/dWJyZmtpMGw2OC5j/bG91ZGZyb250Lm5l/dC83MThjNmU0ODk1/NjI0OTEyMWNmM2Nj/YTFhMjJhOTlmODM3/MmEzZjBkLzVmNjg5/L19udXh0L2ltZy9j/MmE2MDVmLnBuZw"
+			},
+			{
+				"title": "TailWind CSS",
+				"src": "https://media.zeemly.com/zeemly/product/tailwind-css.png"
+			}
+		],
+		"link": "https://tung.uiux.digital-1.devopportunities.dev/"
+	},
+	{
 		"title": "Nuxt Drizzle",
 		"src": "https://media.discordapp.net/attachments/1060066788878069891/1172792077554302997/Screenshot_2023-11-10_at_11.56.23_PM.png?ex=65619abc&is=654f25bc&hm=afdffc319647abdf936c33fae33d0dde21e1d1089bc21aff20a87090e3f7a43e&=&width=720&height=400",
 		"description": "Template project built on the Nuxt framework, showcasing the power of Drizzle ORM for efficient data management. The template employs Tailwind CSS for responsive and sleek design. Enhanced with the refined components of Daisy UI. This project brings together the strengths of Nuxt, Drizzle ORM, Tailwind CSS, and Daisy UI.",
@@ -8,14 +68,17 @@
 				"title": "Nuxt.js",
 				"src": "https://imgs.search.brave.com/ac3WGz-DgM03071K34NEHSDn6LTb8cM2YIrFfa7YAcM/rs:fit:860:0:0/g:ce/aHR0cHM6Ly91cGxv/YWQud2lraW1lZGlh/Lm9yZy93aWtpcGVk/aWEvY29tbW9ucy9h/L2FlL051eHRfbG9n/by5zdmc.svg"
 			},
-
 			{
-				"title": "Auth.js",
-				"src": "https://authjs.dev/img/logo/logo-sm.webp"
+				"title": "Vue.js 3",
+				"src": "https://imgs.search.brave.com/Hsy3vsixUOO8EgH22as2LpgNP6zF5hEx6P-pDoc0n0c/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9kMzN3/dWJyZmtpMGw2OC5j/bG91ZGZyb250Lm5l/dC83MThjNmU0ODk1/NjI0OTEyMWNmM2Nj/YTFhMjJhOTlmODM3/MmEzZjBkLzVmNjg5/L19udXh0L2ltZy9j/MmE2MDVmLnBuZw"
 			},
 			{
 				"title": "TailWind CSS",
 				"src": "https://media.zeemly.com/zeemly/product/tailwind-css.png"
+			},
+			{
+				"title": "Auth.js",
+				"src": "https://authjs.dev/img/logo/logo-sm.webp"
 			},
 			{
 				"title": "PostgreSQL",
@@ -90,6 +153,10 @@
 			{
 				"title": "Nuxt.js",
 				"src": "https://imgs.search.brave.com/ac3WGz-DgM03071K34NEHSDn6LTb8cM2YIrFfa7YAcM/rs:fit:860:0:0/g:ce/aHR0cHM6Ly91cGxv/YWQud2lraW1lZGlh/Lm9yZy93aWtpcGVk/aWEvY29tbW9ucy9h/L2FlL051eHRfbG9n/by5zdmc.svg"
+			},
+			{
+				"title": "Vue.js 3",
+				"src": "https://imgs.search.brave.com/Hsy3vsixUOO8EgH22as2LpgNP6zF5hEx6P-pDoc0n0c/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9kMzN3/dWJyZmtpMGw2OC5j/bG91ZGZyb250Lm5l/dC83MThjNmU0ODk1/NjI0OTEyMWNmM2Nj/YTFhMjJhOTlmODM3/MmEzZjBkLzVmNjg5/L19udXh0L2ltZy9j/MmE2MDVmLnBuZw"
 			},
 			{
 				"title": "TailWind CSS",
