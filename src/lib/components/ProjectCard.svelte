@@ -15,10 +15,10 @@
 
 			<div class="lg:w-2/3 text-sm p-4 !m-0 lg:ml-32">
 				<div class="flex items-center space-x-3 mb-4">
-					<p class="text-lg font-1 title text-white">{project.title}</p>
+					<p class="text-xl font-1 title text-white">{project.title}</p>
 					<ArrowRightOutline class="text-white opacity-70 group-hover:text-indigo-400 transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-3 "/>
 				</div>
-				<p class="description text-white text-xs lg:text-base">
+				<p class="description text-white  text-base">
 					{project.description}
 				</p>
 				<div class=" flex flex-wrap gap-2 p-2">

@@ -36,6 +36,11 @@ onMount(()=>{
 					activeSection = entry.target.id; // Set the active section
 					// console.log(activeSection);
 
+					if (activeSection=== 'contact') {
+						contactIsInView.set(true);
+					} else {
+						contactIsInView.set(false);
+					}
 			
 				}
 			});

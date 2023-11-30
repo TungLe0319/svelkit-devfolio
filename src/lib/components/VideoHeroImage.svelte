@@ -34,17 +34,15 @@
 			<p class="font-2 mb-2 text-xl">Hi, my name is</p>
 		</Typewriter>
 		<Typewriter interval={100} delay={1000}>
-			<p class="text-4xl lg:text-8xl font-1 font-extrabold text-indigo-400 text-shadow">Tung Le.</p>
+			<p class="text-4xl lg:text-8xl font-1 font-extrabold text-indigo-400 text-shadow">Tung Le -</p>
 		</Typewriter>
-		<Typewriter interval={100} delay={2000}>
+		<Typewriter interval={100} delay={1500}>
 			<p class="text-4xl lg:text-8xl font-1 font-extrabold text-indigo-200 text-shadow">
-				Software
+				Digital Doodler & Code Tinkerer
 			</p>
 		</Typewriter>
-		<Typewriter interval={100} delay={3500}>
-			<p class="text-4xl lg:text-8xl font-1 font-extrabold text-indigo-200 text-shadow">
-				Developer
-			</p>
+	<Typewriter interval={20} delay={3000}>
+			<p class="font-2 mb-2 text-2xl lg:w-1/2">I believe a capable developer is someone who perpetually adopts new skills, embraces experimentation, challenges assumptions, and actively solicits feedback to grow.</p>
 		</Typewriter>
 	</div>
 </div>

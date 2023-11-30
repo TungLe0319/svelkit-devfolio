@@ -17,16 +17,7 @@
 		}
 	}
 
-	$:{
 	
-		
-		if ($scrollY >= 8200) {
-			
-						$contactIsInView = true;
-					} else {
-						$contactIsInView = false;
-					}
-		}
 	
 	
 
