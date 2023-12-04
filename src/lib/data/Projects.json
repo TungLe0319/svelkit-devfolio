@@ -1,5 +1,33 @@
 [
 	{
+		"title": "UIUX-Construction",
+		"src": "https://cdn.discordapp.com/attachments/1060066788878069891/1181104026247499776/image.png?ex=657fd7d7&is=656d62d7&hm=ad475e7c6c65aa261abb3cfb209bb69d681f313f07d569cb4010318d5dd2779e&",
+		"description": "A part of my  comprehensive developer portfolio series, meticulously crafted with Nuxt, Vue,Tailwind and Vuetify. This collection showcases my proficiency in creating dynamic and visually appealing UI/UX landing pages.",
+		"tech": [
+			{
+				"title": "Nuxt.js",
+				"src": "https://imgs.search.brave.com/ac3WGz-DgM03071K34NEHSDn6LTb8cM2YIrFfa7YAcM/rs:fit:860:0:0/g:ce/aHR0cHM6Ly91cGxv/YWQud2lraW1lZGlh/Lm9yZy93aWtpcGVk/aWEvY29tbW9ucy9h/L2FlL051eHRfbG9n/by5zdmc.svg"
+			},
+			{
+				"title": "Vue.js 3",
+				"src": "https://imgs.search.brave.com/Hsy3vsixUOO8EgH22as2LpgNP6zF5hEx6P-pDoc0n0c/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9kMzN3/dWJyZmtpMGw2OC5j/bG91ZGZyb250Lm5l/dC83MThjNmU0ODk1/NjI0OTEyMWNmM2Nj/YTFhMjJhOTlmODM3/MmEzZjBkLzVmNjg5/L19udXh0L2ltZy9j/MmE2MDVmLnBuZw"
+			},
+			{
+				"title": "TailWind CSS",
+				"src": "https://media.zeemly.com/zeemly/product/tailwind-css.png"
+			},
+			{
+				"title": "VueUse",
+				"src": "https://vueuse.org/favicon.svg"
+			},
+			{
+				"title": "Vuetify",
+				"src": "https://cdn.vuetifyjs.com/docs/images/brand-kit/v-logo.svg"
+			}
+		],
+		"link": "https://tung.uiux.contruction.devopportunities.dev/"
+	},
+	{
 		"title": "UIUX-Cafe",
 		"src": "https://cdn.discordapp.com/attachments/1060066788878069891/1180946260153335818/image.png?ex=657f44e9&is=656ccfe9&hm=2d4aff6b129a22b82c5e3308e7df460335eadff97ed0d6b59d80ea571e35b729&",
 		"description": "A part of my  comprehensive developer portfolio series, meticulously crafted with Nuxt, Vue,Tailwind and Vuetify. This collection showcases my proficiency in creating dynamic and visually appealing UI/UX landing pages.",
@@ -16,10 +44,10 @@
 				"title": "TailWind CSS",
 				"src": "https://media.zeemly.com/zeemly/product/tailwind-css.png"
 			},
-					{
-						"title": "Vuetify",
-						"src": "https://cdn.vuetifyjs.com/docs/images/brand-kit/v-logo.svg"
-					}
+			{
+				"title": "Vuetify",
+				"src": "https://cdn.vuetifyjs.com/docs/images/brand-kit/v-logo.svg"
+			}
 		],
 		"link": "https://tung.uiux.cafe-2.devopportunities.dev/"
 	},
